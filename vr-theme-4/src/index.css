@@ -13,7 +13,7 @@ v2.0 | 20110126
 License: none (public domain)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
     --sidebar-width: 238px;
@@ -69,7 +69,7 @@ q:after {
 html,
 body {min-width: 375px; min-height: 100vh;}
 
-html body {font-weight: 400; font-size: 15px; line-height: 20px; margin: 0; background-color: #0F1E4E; color: #CFD2DC; -ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
+body {-ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
 
 .wrapper {min-height: 100vh;}
 a {color: #000;text-decoration: none;}

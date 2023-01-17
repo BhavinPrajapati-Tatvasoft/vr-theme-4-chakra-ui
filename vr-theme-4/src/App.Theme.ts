@@ -1,12 +1,24 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
-  fonts: {
-    body: "Ubuntu, sans-serif",
+  styles: {
+    global: {
+      // styles for the `body`
+      body: {
+        bg: "#0F1E4E",
+        color: "#CFD2DC",
+        fontFamily: "Open Sans, sans-serif",
+        fontSize: "15px",
+        lineHeight: "20px",
+        fontWeight: 400,
+      },
+    },
   },
+
   colors: {
     primary: "#59B997",
-    body: "#4b4b4b",
+    body: "#CFD2DC",
+    backgroundColor: "red",
     green: {
       300: "#262626",
       500: "#59B997",
