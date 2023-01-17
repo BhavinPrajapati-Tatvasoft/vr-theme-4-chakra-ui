@@ -98,10 +98,11 @@ input[type=email],
 input[type=password],
 textarea { -webkit-appearance: none; appearance: none;}
 
-::-webkit-input-placeholder {color: #000;}
-::-moz-placeholder {color: #000;}
-:-ms-input-placeholder {color: #000;}
-:-moz-placeholder {color: #000;}
+.chakra-input::-webkit-input-placeholder {color: #B2B2B2;}
+.chakra-input::-moz-placeholder {color: #B2B2B2;}
+.chakra-input:-ms-input-placeholder {color: #B2B2B2;}
+.chakra-input:-moz-placeholder {color: #B2B2B2;}
+
 ::-moz-focus-inner {border: 0;}
 select:-moz-focusring {color: transparent;text-shadow: 0 0 0 #000;}
 option:not(:checked) {color: black;}
@@ -116,6 +117,10 @@ input[type="search"]::-webkit-search-results-decoration {-webkit-appearance: non
 
 /* Common CSS
 --------------------------------------------------------------------------------------------------------*/
+h3.chakra-text{font-size: 35px; line-height: 40px;}
+h4.chakra-text{font-size: 25px; line-height: 30px; font-weight: 600;}
+h5.chakra-text{font-size: 24px; line-height: 30px; font-weight: 600;}
+h6.chakra-text{font-size: 20px; line-height: 26px;}
 
 /* Custom Card
 --------------------------------------------------------------------------------------------------------*/
@@ -143,6 +148,13 @@ input[type="search"]::-webkit-search-results-decoration {-webkit-appearance: non
 /* Login Page
 --------------------------------------------------------------------------------------------------------*/
 .login-wrapper{min-height: 100vh;}
+.login-form{padding: 22px 38px 41px;}
+.login-tab .chakra-tabs__tab{text-transform: uppercase; color: #fff; opacity: 0.7; font-size: 16px; line-height: 22px; font-weight: 600; padding: 16px 0;}
+.login-tab .chakra-tabs__tab:not(:first-child){margin-left: 46px;}
+.login-tab .chakra-tabs__tablist{border: none;}
+.login-tab .chakra-tabs__tab[aria-selected=true], .login-tab .chakra-tabs__tab[data-selected]{ border-color: #fff; opacity: 1; }
+.login-tab .chakra-tabs__tab-panel{padding: 0;}
+.login-tab h4{padding-top: 50px;}
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
 .sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 4;}
