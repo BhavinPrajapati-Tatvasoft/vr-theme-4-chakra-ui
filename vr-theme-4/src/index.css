@@ -13,7 +13,7 @@ v2.0 | 20110126
 License: none (public domain)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
     --sidebar-width: 130px;
@@ -69,7 +69,7 @@ q:after {
 html,
 body {min-width: 375px; min-height: 100vh;}
 
-html body {font-weight: 400; font-size: 15px; line-height: 20px; margin: 0; background-color: #051444; color: #CFD2DC; -ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
+body {-ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
 
 .wrapper {min-height: 100vh;}
 a {color: #000;text-decoration: none;}
@@ -142,7 +142,7 @@ input[type="search"]::-webkit-search-results-decoration {-webkit-appearance: non
 
 /* Login Page
 --------------------------------------------------------------------------------------------------------*/
-
+.login-wrapper{min-height: 100vh;}
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
 .sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 4;}
