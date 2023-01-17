@@ -141,7 +141,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .header .chakra-menu__menu-button >span{display: flex;align-items: center;}
 .header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}
 .header .chakra-menu__menu-button .chakra-button__icon{margin-left: 8px;}
-.header .right-content{margin-left: auto;}
+.header .right-content{margin-left: auto;display: flex;align-items: center;}
 .header .icon-btn{margin-right: 26px;border: transparent;}
 
 
