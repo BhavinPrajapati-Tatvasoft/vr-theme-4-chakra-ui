@@ -20,10 +20,10 @@ const Sidebar: React.FC = () => {
               className="nav-link"
               onClick={closeSidebar}
             >
-              <span className="img-wrapper">
+              <Text as="span" className="img-wrapper">
                 <Image src={dashboardIcon} className="default-icon" />
                 <Image src={dashboardActiveIcon} className="active-icon" />
-              </span>
+              </Text>
               <Text as="span">Dashboard</Text>
             </NavLink>
           </ListItem>
@@ -34,10 +34,10 @@ const Sidebar: React.FC = () => {
               className="nav-link"
               onClick={closeSidebar}
             >
-              <span className="img-wrapper">
+              <Text as="span" className="img-wrapper">
                 <Image src={userIcon} alt="Users" className="default-icon" />
                 <Image src={userActiveIcon} alt="Users" className="active-icon" />
-              </span>
+              </Text>
               <Text as="span">Users</Text>
             </NavLink>
           </ListItem>
@@ -48,11 +48,10 @@ const Sidebar: React.FC = () => {
               className="nav-link"
               onClick={closeSidebar}
             >
-              <span className="img-wrapper">
-                <Image src={docsIcon} alt="Docs" className="default-icon"/>
-                <Image src={docsActiveIcon} alt="Docs" className="active-icon"/>
-
-              </span>
+              <Text as="span" className="img-wrapper">
+                <Image src={docsIcon} alt="Docs" className="default-icon" />
+                <Image src={docsActiveIcon} alt="Docs" className="active-icon" />
+              </Text>
               <Text as="span">Docs</Text>
             </NavLink>
           </ListItem>
@@ -63,10 +62,10 @@ const Sidebar: React.FC = () => {
               className="nav-link"
               onClick={closeSidebar}
             >
-              <span className="img-wrapper">
-                <Image src={timelineIcon} alt="Timeline" className="default-icon"/>
-                <Image src={timelineActiveIcon} alt="Timeline" className="active-icon"/>
-              </span>
+              <Text as="span" className="img-wrapper">
+                <Image src={timelineIcon} alt="Timeline" className="default-icon" />
+                <Image src={timelineActiveIcon} alt="Timeline" className="active-icon" />
+              </Text>
               <Text as="span">Timeline</Text>
             </NavLink>
           </ListItem>
@@ -77,10 +76,10 @@ const Sidebar: React.FC = () => {
               className="nav-link"
               onClick={closeSidebar}
             >
-              <span className="img-wrapper">
-                <Image src={helpIcon} alt="Help" className="default-icon"/>
-                <Image src={helpActiveIcon} alt="Help" className="active-icon"/>
-              </span>
+              <Text as="span" className="img-wrapper">
+                <Image src={helpIcon} alt="Help" className="default-icon" />
+                <Image src={helpActiveIcon} alt="Help" className="active-icon" />
+              </Text>
               <Text as="span">Help</Text>
             </NavLink>
           </ListItem>
@@ -91,10 +90,10 @@ const Sidebar: React.FC = () => {
               className="nav-link"
               onClick={closeSidebar}
             >
-              <span className="img-wrapper">
-                <Image src={settingIcon} alt="Settings" className="default-icon"/>
-                <Image src={settingActiveIcon} alt="Settings" className="active-icon"/>
-              </span>
+              <Text as="span" className="img-wrapper">
+                <Image src={settingIcon} alt="Settings" className="default-icon" />
+                <Image src={settingActiveIcon} alt="Settings" className="active-icon" />
+              </Text>
               <Text as="span">Settings</Text>
             </NavLink>
           </ListItem>
