@@ -125,6 +125,20 @@ input[type="search"]::-webkit-search-results-decoration {-webkit-appearance: non
 
 /* Header
 --------------------------------------------------------------------------------------------------------*/
+.header{display: flex;align-items: center;background-color: #0F1E4E; padding: 15px 26px 14px 0;}
+.header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-left: 130px;}
+.header .search-wrapper .chakra-input{border-radius: 10px; border-color: transparent; padding: 8px 8px 8px 30px; height: 48px; color: #FFFFFF; background-color: transparent; background-image: url('./assets/images/search-ic.svg'); background-position: left 8px center; background-repeat: no-repeat; font-family: inherit;}
+.header .search-wrapper .chakra-input:focus{border-color: #59B997 !important;}
+.header .search-wrapper .chakra-input::placeholder{color: #FFFFFF;}
+.header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;}
+.header .chakra-menu__menu-button:active,
+.header .chakra-menu__menu-button[data-active]{background-color: transparent; border-color: transparent;}
+.header .chakra-menu__menu-button >span{display: flex;align-items: center;}
+.header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}
+.header .chakra-menu__menu-button .chakra-button__icon{margin-left: 8px;}
+.header .right-content{margin-left: auto;}
+.header .icon-btn{margin-right: 26px;border: transparent;}
+
 
 /* Login Page
 --------------------------------------------------------------------------------------------------------*/
@@ -143,10 +157,11 @@ input[type="search"]::-webkit-search-results-decoration {-webkit-appearance: non
 .sidebar li .nav-link.active .chakra-text{background: -webkit-linear-gradient(#E239F1, #2296CB);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .open-sidebar .sidebar{left: calc(-1 * var(--sidebar-width));}
 .sidebar li a:not(.active):focus {background-color: rgba(0, 0, 0, 0.08);}
-.logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;margin: 30px auto 52px;}
+.sidebar .logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;margin: 30px auto 52px;}
 .logo > img{display: block;}
 .sidebar li .nav-link.active .active-icon{opacity: 1;}
 .sidebar li .nav-link.active .default-icon{opacity: 0;}
+.logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;}
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
