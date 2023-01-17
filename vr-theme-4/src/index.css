@@ -1,6 +1,6 @@
 /*
 ------------------------------------------------------------
-Project Name : VR Theme 6;
+Project Name : VR Theme 4;
 ------------------------------------------------------------
 @charset "utf-8";
 
@@ -16,7 +16,7 @@ License: none (public domain)
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --sidebar-width: 238px;
+    --sidebar-width: 130px;
 }
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
@@ -130,6 +130,20 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 
 /* Header
 --------------------------------------------------------------------------------------------------------*/
+.header{display: flex;align-items: center;background-color: #0F1E4E; padding: 15px 26px 14px 0;}
+.header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-left: 130px;}
+.header .search-wrapper .chakra-input{border-radius: 10px; border-color: transparent; padding: 8px 8px 8px 30px; height: 48px; color: #FFFFFF; background-color: transparent; background-image: url('./assets/images/search-ic.svg'); background-position: left 8px center; background-repeat: no-repeat; font-family: inherit;}
+.header .search-wrapper .chakra-input:focus{border-color: #59B997 !important;}
+.header .search-wrapper .chakra-input::placeholder{color: #FFFFFF;}
+.header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;}
+.header .chakra-menu__menu-button:active,
+.header .chakra-menu__menu-button[data-active]{background-color: transparent; border-color: transparent;}
+.header .chakra-menu__menu-button >span{display: flex;align-items: center;}
+.header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}
+.header .chakra-menu__menu-button .chakra-button__icon{margin-left: 8px;}
+.header .right-content{margin-left: auto;display: flex;align-items: center;}
+.header .icon-btn{margin-right: 26px;border: transparent;}
+
 
 /* Login Page
 --------------------------------------------------------------------------------------------------------*/
@@ -141,8 +155,26 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .login-tab .chakra-tabs__tab[aria-selected=true], .login-tab .chakra-tabs__tab[data-selected]{ border-color: #fff; opacity: 1; }
 .login-tab .chakra-tabs__tab-panel{padding: 0;}
 .login-tab h4{padding-top: 50px;}
+
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
+.sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 4;}
+.sidebar li .nav-link{display: flex;flex-direction: column; align-items: center; color: #FFFFFF; padding: 15px; position: relative;margin-bottom: 16px;}
+.sidebar li:last-child .nav-link{margin-bottom: 0;}
+.sidebar li .nav-link .img-wrapper{position: relative;}
+.sidebar li .nav-link img{display: block;width: 30px;height: 30px;margin-bottom: 9px;}
+.sidebar li .nav-link .active-icon{display: block;position: absolute;top: 0;opacity: 0;}
+.sidebar li .nav-link span{color: #FFFFFF; transition: all 300ms ease;}
+.sidebar li .nav-link::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: rgba(0, 0, 0, 0.08); transition: all 300ms ease; z-index: -1;}
+.sidebar li .nav-link:hover::after { width: 100%;}
+.sidebar li .nav-link.active .chakra-text{background: -webkit-linear-gradient(#E239F1, #2296CB);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
+.open-sidebar .sidebar{left: calc(-1 * var(--sidebar-width));}
+.sidebar li a:not(.active):focus {background-color: rgba(0, 0, 0, 0.08);}
+.sidebar .logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;margin: 30px auto 52px;}
+.logo > img{display: block;}
+.sidebar li .nav-link.active .active-icon{opacity: 1;}
+.sidebar li .nav-link.active .default-icon{opacity: 0;}
+.logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;}
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
@@ -163,6 +195,8 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 }
 
 @media (max-width:1199px) {
+    .sidebar{width: calc(var(--sidebar-width) - 30px);}
+    .sidebar li .nav-link{padding: 10px;}
 
 }
 

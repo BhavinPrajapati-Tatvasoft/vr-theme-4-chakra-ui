@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
         <Header />
         <Sidebar />
         {/* Main content Start */}
-        <div className="main-content">Dashboard</div>
+        <div className="main-content"></div>
         {/* Main content End */}
       </div>
     </>
