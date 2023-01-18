@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Hide, Image, List, ListItem, Show, Text } from "@chakra-ui/react";
 import { Link, NavLink } from "react-router-dom";
 import {
@@ -15,11 +16,28 @@ import {
   userActiveIcon,
   userIcon,
 } from "../../assets/images";
+import gsap from "gsap";
+const { useLayoutEffect } = React;
 
 const Sidebar: React.FC = () => {
   function closeSidebar() {
     document.body.classList.remove("open-sidebar");
   }
+  //GSAP Animation
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      ".sidebar li a",
+      {
+        opacity: 0,
+        x: -40,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.3,
+      }
+    );
+  }, []);
 
   return (
     <>

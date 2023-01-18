@@ -1,3 +1,4 @@
+import * as React from "react";
 import { IconButton } from "@chakra-ui/button";
 import { Card } from "@chakra-ui/card";
 import { Image } from "@chakra-ui/image";
@@ -27,8 +28,38 @@ import {
 import RevenueReport from "../../Components/Charts/revenueReport";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
+import CountUp from "react-countup";
+import gsap from "gsap";
+const { useLayoutEffect } = React;
 
 const Dashboard: React.FC = () => {
+  //GSAP Animation
+  useLayoutEffect(() => {
+    let statisticsSvg = gsap.timeline();
+    statisticsSvg.fromTo(
+      ".statistic-card .card-mockup",
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 2 }
+    );
+
+    let pageText = gsap.timeline();
+    pageText.fromTo(
+      ".page-title",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    pageText.fromTo(
+      "h6.card-title",
+      { y: "20px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
+    pageText.fromTo(
+      ".data-time-log",
+      { y: "40px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
+    
+  }, []);
   return (
     <>
       <Helmet>
@@ -57,28 +88,26 @@ const Dashboard: React.FC = () => {
                     title="Customers"
                     className="statistic-card sale-up"
                   >
-                    <div className="flex-block">
-                      <div>
-                        <Text as="h6" className="card-title">
-                          Customers
-                        </Text>
-                        <Text as="h4" className="card-number">
-                          45,320
-                        </Text>
-                        <Text as="span" className="data-difference">
-                          <Image src={greenArrowIcon} alt="Arrow Up" />
-                          21.25%
-                        </Text>
-                        <Text as="span" className="data-time-log">
-                          Since Last Month
-                        </Text>
-                      </div>
-                      <Image
-                        src={customersCardIcon}
-                        alt="Card Icon"
-                        className="card-mockup"
-                      />
+                    <div>
+                      <Text as="h6" className="card-title">
+                        Customers
+                      </Text>
+                      <Text as="h4" className="card-number">
+                        <CountUp end={45320} separator="," />
+                      </Text>
+                      <Text as="span" className="data-difference">
+                        <Image src={greenArrowIcon} alt="Arrow Up" />
+                        <CountUp end={21.25} suffix="%" decimals={2} />
+                      </Text>
+                      <Text as="span" className="data-time-log">
+                        Since Last Month
+                      </Text>
                     </div>
+                    <Image
+                      src={customersCardIcon}
+                      alt="Card Icon"
+                      className="card-mockup"
+                    />
                   </a>
                 </GridItem>
                 <GridItem colSpan={{ base: 12, sm: 6 }}>
@@ -87,28 +116,26 @@ const Dashboard: React.FC = () => {
                     title="Orders"
                     className="statistic-card sale-down"
                   >
-                    <div className="flex-block">
-                      <div>
-                        <Text as="h6" className="card-title">
-                          Orders
-                        </Text>
-                        <Text as="h4" className="card-number">
-                          1,245
-                        </Text>
-                        <Text as="span" className="data-difference">
-                          <Image src={redArrowIcon} alt="Arrow Down" />
-                          5.25%
-                        </Text>
-                        <Text as="span" className="data-time-log">
-                          Since Last Month
-                        </Text>
-                      </div>
-                      <Image
-                        src={ordersCardIcon}
-                        alt="Card Icon"
-                        className="card-mockup"
-                      />
+                    <div>
+                      <Text as="h6" className="card-title">
+                        Orders
+                      </Text>
+                      <Text as="h4" className="card-number">
+                        <CountUp end={1245} separator="," />
+                      </Text>
+                      <Text as="span" className="data-difference">
+                        <Image src={redArrowIcon} alt="Arrow Down" />
+                        <CountUp end={5.25} suffix="%" decimals={2} />
+                      </Text>
+                      <Text as="span" className="data-time-log">
+                        Since Last Month
+                      </Text>
                     </div>
+                    <Image
+                      src={ordersCardIcon}
+                      alt="Card Icon"
+                      className="card-mockup"
+                    />
                   </a>
                 </GridItem>
                 <GridItem colSpan={{ base: 12, sm: 6 }}>
@@ -117,54 +144,50 @@ const Dashboard: React.FC = () => {
                     title="Earning"
                     className="statistic-card sale-down"
                   >
-                    <div className="flex-block">
-                      <div>
-                        <Text as="h6" className="card-title">
-                          Earning
-                        </Text>
-                        <Text as="h4" className="card-number">
-                          $ 56,890
-                        </Text>
-                        <Text as="span" className="data-difference">
-                          <Image src={redArrowIcon} alt="Arrow Down" />
-                          3.24%
-                        </Text>
-                        <Text as="span" className="data-time-log">
-                          Since Last Month
-                        </Text>
-                      </div>
-                      <Image
-                        src={earningCardIcon}
-                        alt="Card Icon"
-                        className="card-mockup"
-                      />
+                    <div>
+                      <Text as="h6" className="card-title">
+                        Earning
+                      </Text>
+                      <Text as="h4" className="card-number">
+                        <CountUp end={56890} separator="," prefix="$ " />
+                      </Text>
+                      <Text as="span" className="data-difference">
+                        <Image src={redArrowIcon} alt="Arrow Down" />
+                        <CountUp end={3.24} suffix="%" decimals={2} />
+                      </Text>
+                      <Text as="span" className="data-time-log">
+                        Since Last Month
+                      </Text>
                     </div>
+                    <Image
+                      src={earningCardIcon}
+                      alt="Card Icon"
+                      className="card-mockup"
+                    />
                   </a>
                 </GridItem>
                 <GridItem colSpan={{ base: 12, sm: 6 }}>
                   <a href="#" title="Growth" className="statistic-card sale-up">
-                    <div className="flex-block">
-                      <div>
-                        <Text as="h6" className="card-title">
-                          Growth
-                        </Text>
-                        <Text as="h4" className="card-number">
-                          + 60.20%
-                        </Text>
-                        <Text as="span" className="data-difference">
-                          <Image src={greenArrowIcon} alt="Arrow Down" />
-                          15.89%
-                        </Text>
-                        <Text as="span" className="data-time-log">
-                          Since Last Month
-                        </Text>
-                      </div>
-                      <Image
-                        src={growthCardIcon}
-                        alt="Card Icon"
-                        className="card-mockup"
-                      />
+                    <div>
+                      <Text as="h6" className="card-title">
+                        Growth
+                      </Text>
+                      <Text as="h4" className="card-number">
+                        <CountUp end={60.20} prefix="+ " suffix="%" decimals={2} />
+                      </Text>
+                      <Text as="span" className="data-difference">
+                        <Image src={greenArrowIcon} alt="Arrow Down" />
+                        <CountUp end={15.89} suffix="%" decimals={2} />
+                      </Text>
+                      <Text as="span" className="data-time-log">
+                        Since Last Month
+                      </Text>
                     </div>
+                    <Image
+                      src={growthCardIcon}
+                      alt="Card Icon"
+                      className="card-mockup"
+                    />
                   </a>
                 </GridItem>
               </Grid>
@@ -314,12 +337,42 @@ const Dashboard: React.FC = () => {
                 </div>
                 <CircularProgress value={60} thickness="5px" size="300px">
                   <CircularProgressLabel>
-                    <Text as="h3">60%</Text>
+                    <Text as="h3">
+                      <CountUp
+                        end={60}
+                        suffix="%"
+                        duration={1}
+                        enableScrollSpy
+                        scrollSpyOnce
+                      >
+                        {({ countUpRef, start }) => (
+                          <>
+                            <span ref={countUpRef} />
+                          </>
+                        )}
+                      </CountUp>
+                    </Text>
                     <Text as="h6">Progress</Text>
                   </CircularProgressLabel>
                 </CircularProgress>
                 <div className="bottom-text">
-                  <Text as="h5">$53,000.00</Text>
+                  <Text as="h5">
+                    <CountUp
+                      end={53000}
+                      prefix="$"
+                      separator=","
+                      duration={2}
+                      enableScrollSpy
+                      scrollSpyOnce
+                      decimals={2}
+                    >
+                      {({ countUpRef, start }) => (
+                        <>
+                          <span ref={countUpRef} />
+                        </>
+                      )}
+                    </CountUp>
+                  </Text>
                   <Text as="h6">Used Balance this Billing Cycle</Text>
                 </div>
               </Card>
