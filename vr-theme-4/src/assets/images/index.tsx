@@ -29,3 +29,4 @@ export const dataChart = require("./data-chart.png");
 export const diamondShape = require("./diamond-shape.png");
 export const pillShape = require("./pill-shape.png");
 export const roundShape = require("./round-shape-img.png");
+export const hamburgerIcon = require("./hamburger-menu-icon.svg").default;

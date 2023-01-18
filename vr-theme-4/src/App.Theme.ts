@@ -113,7 +113,13 @@ const theme = extendTheme({
             border: "0",
             bg: "#0F1E4E",
             padding: "22px 30px 28px",
-            height: "100%"
+            height: "100%",
+            "@media(max-width:1399px)":{
+               padding: "20px",
+            },
+            "@media(max-width:991px)":{
+              padding: "16px",
+           }
           },
         },
       },
@@ -155,6 +161,16 @@ const theme = extendTheme({
       },
       defaultProps: {
         variant: "simple",
+      },
+    },
+    CircularProgress: {
+      variants: {
+        primary: {
+          bg: "gradient",
+        },
+      },
+      defaultProps: {
+        variant: "primary",
       },
     },
   },
