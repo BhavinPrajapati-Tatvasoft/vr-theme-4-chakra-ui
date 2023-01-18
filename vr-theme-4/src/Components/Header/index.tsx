@@ -39,12 +39,12 @@ const Header: React.FC = () => {
             >
               <Image src={adminUser} alt="User" className="user-profile-pic" />
               <Hide below="lg">
-                <Text>Jhon Doe</Text>
+                <Text>John Doe</Text>
               </Hide>
             </MenuButton>
             <MenuList>
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>My Account</MenuItem>
+              <MenuItem>My Profile</MenuItem>
+              <MenuItem>Help</MenuItem>
               <MenuItem as={customLink} to="/login">
                 Logout
               </MenuItem>
