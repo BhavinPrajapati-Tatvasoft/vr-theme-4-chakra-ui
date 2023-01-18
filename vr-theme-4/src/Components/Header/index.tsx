@@ -2,10 +2,10 @@ import { Button, IconButton } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import { Input } from "@chakra-ui/input";
 import { Text } from "@chakra-ui/layout";
-import { Hide } from "@chakra-ui/media-query";
+import { Hide, Show } from "@chakra-ui/media-query";
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu";
 import { Link as customLink, Link } from "react-router-dom";
-import { adminUser, logoPng, messageIcon, profileDownArrowIcon, searchIcon } from "../../assets/images";
+import { adminUser, hamburgerIcon, logoPng, messageIcon, profileDownArrowIcon, searchIcon } from "../../assets/images";
 
 const Header: React.FC = () => {
   return (
@@ -17,11 +17,29 @@ const Header: React.FC = () => {
         }
       ></div>
       <header className="header">
+        <Show below="md">
+          <IconButton
+            variant="outline"
+            aria-label="toggle-menu"
+            className="toggle-button icon-btn"
+            icon={<Image alt="Hamburger" src={hamburgerIcon} />}
+            onClick={(e) => document.body.classList.toggle("open-sidebar")}
+          />
+        </Show>
         <Link to="#" title="Company" className="logo"><Image src={logoPng} /></Link>
         <div className="search-wrapper">
           <Input type="text" variant="outline" placeholder="Search" />
         </div>
         <div className="right-content">
+          <Show below="md">
+            <IconButton
+              variant="outline"
+              aria-label="Search"
+              className="search-toggle icon-btn"
+              icon={<Image alt="Search" src={searchIcon} />}
+              onClick={(e) => document.body.classList.toggle("show-searchbar")}
+            />
+          </Show>
           <IconButton
             variant="outline"
             aria-label="Message"

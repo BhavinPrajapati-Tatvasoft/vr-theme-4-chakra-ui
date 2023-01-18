@@ -112,6 +112,18 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {-webkit-appearance: none;}
 
+/* width */
+::-webkit-scrollbar {width: 17px;}
+  
+/* Track */
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 10px;}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {background: linear-gradient(90.11deg, #E239F1 0%, #2296CB 101.9%); border-radius: 10px;}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: linear-gradient(90.11deg, #2296CB 101.9%, #E239F1 101.9%) }
+
 /* FontSize
 --------------------------------------------------------------------------------------------------------*/
 
@@ -155,7 +167,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .header .right-content{margin-left: auto;display: flex;align-items: center;}
 .header .icon-btn{margin-right: 10px;border: transparent;}
 .header .chakra-menu__menu-button:hover,.header .chakra-menu__menu-button:focus{background-color: rgba(255,255,255, 0.08);}
-
+.page-scrolled .header{box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.17);}
 
 
 /* Login Page
@@ -193,6 +205,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .login-form .chakra-link.chakra-button{margin-bottom: 37px;}
 .login-wrapper .copyright-text{color: #FFFFFF; opacity: 0.7; padding-top: 20px;}
 .filter{height: 50px; width: 50px; background-color: #0081FF; filter: blur(250px);}
+
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
 .sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 4;}
@@ -202,11 +215,11 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .sidebar li .nav-link img{display: block;width: 30px;height: 30px;margin-bottom: 9px;}
 .sidebar li .nav-link .active-icon{display: block;position: absolute;top: 0;opacity: 0;}
 .sidebar li .nav-link span{color: #FFFFFF; transition: all 300ms ease;}
-.sidebar li .nav-link::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: rgba(0, 0, 0, 0.08); transition: all 300ms ease; z-index: -1;}
-.sidebar li .nav-link:hover::after { width: 100%;}
+.sidebar li .nav-link::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: rgba(255,255,255, 0.08); transition: all 300ms ease; z-index: -1;}
+.sidebar li .nav-link:not(.active):hover::after { width: 100%;}
 .sidebar li .nav-link.active .chakra-text{background: -webkit-linear-gradient(#E239F1, #2296CB);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .open-sidebar .sidebar{left: calc(-1 * var(--sidebar-width));}
-.sidebar li a:not(.active):focus {background-color: rgba(0, 0, 0, 0.08);}
+.sidebar li a:not(.active):focus{background-color: rgba(255,255,255, 0.08);}
 .sidebar .logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;margin: 30px auto 42px;}
 .logo > img{display: block;}
 .sidebar li .nav-link.active .active-icon{opacity: 1;}
@@ -217,7 +230,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 --------------------------------------------------------------------------------------------------------*/
 .main-content{ padding: 110px 37px 40px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
 
-.statistic-card{background-color: #0F1E4E;display: flex;flex-direction: column;padding: 20px 30px 24px; border: 1px solid transparent;}
+.statistic-card{background-color: #0F1E4E;display: flex;flex-direction: column;padding: 22px 30px 24px; border: 1px solid transparent; height: 100%;transition: all 300ms ease;}
 .statistic-card .flex-block{display: flex;align-items: center;justify-content: space-between;}
 .statistic-card .data-difference{display: flex;align-items: center;padding-bottom: 3px;}
 .statistic-card .card-title{padding-bottom: 16px;}
@@ -227,13 +240,18 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .sale-up .data-difference{color: #65FF87;}
 .sale-down .data-difference{color: #FF3535;}
 .revenue-card .data-chart{height: 290px;}
+.statistic-card:hover,.statistic-card:focus{border-color: #2296CB;box-shadow: 0px 0px 19px rgba(255,255,255, 0.18);}
 
 .table-card .card-heading{padding-bottom: 8px;}
-.campaign-card .chakra-progress{margin: 0 auto; display: block;}
-.campaign-card .chakra-progress svg{width: 100%; max-width: 254px; height: 254px;margin: 0 auto;}
+.campaign-card .chakra-progress{margin: 0 auto; display: block; margin: 0 auto 24px;}
+.campaign-card .chakra-progress svg{width: 100%; margin: 0 auto;}
 .campaign-card .chakra-progress div{color: #FFFFFF;}
 .campaign-card .bottom-text{text-align: center; color: #CFD2DC;}
 .campaign-card .bottom-text h5{font-size: 22px;padding-bottom: 10px;font-weight: 600;}
+.campaign-card .bottom-text h6{font-size: 15px;line-height: 20px;}
+.campaign-card .chakra-progress__track{stroke: #051444;}
+.campaign-card .chakra-progress__indicator{stroke: #E239F1;}
+
 /* Inner Page
 --------------------------------------------------------------------------------------------------------*/
 
@@ -246,20 +264,49 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
 @media (max-width:1399px) {
-
+    .statistic-card{padding: 20px;}
+    .statistic-card .card-mockup{width: 80px;height: 80px;}
 }
 
 @media (max-width:1199px) {
     .sidebar{width: calc(var(--sidebar-width) - 30px);}
     .sidebar li .nav-link{padding: 10px;}
+    .main-content{margin-left: calc(var(--sidebar-width) - 30px); width: calc(100% - (var(--sidebar-width) - 30px)); padding: 110px 30px 40px;}
 
 }
 
 @media (max-width:991px) {
+    .page-title{padding-bottom: 16px;}
+    .header .chakra-menu__menu-button .user-profile-pic{margin-right: 0;}
+    .header .chakra-menu__menu-button .chakra-button__icon{display: none;}
+    .header .chakra-menu__menu-button{min-width: 0; width: 48px;height: 48px; padding: 8px;display: flex;align-items: center;justify-content: center;}
+    .main-content{padding: 90px 16px 40px;}
+    .header .search-wrapper{margin-left: 64px;}
+    .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.5); z-index: 1;}
+    .statistic-card{padding: 16px;}
+    
 
 }
 
 @media (max-width:767px) {
+    .header{padding: 10px 4px; z-index: 2;}
+    .logo{width: 32px;height: 32px;}
+    .icon-btn.chakra-button{width: 40px;height: 40px;}
+    .header .search-wrapper{position: fixed;left: 0;right: 0;top: -100px;background-color: #051444;max-width: none; transition: all 0.3s; padding: 16px; z-index: 1; margin-left: 0;}
+    .header .search-wrapper .chakra-input{background-color: #0F1E4E;}
+    .header .icon-btn{margin-right: 8px;}
+    .show-searchbar .search-wrapper{top: 0;}
+    .sidebar{left: calc(-1 * var(--sidebar-width) - 100px); width: calc(var(--sidebar-width) + 100px); z-index: 4;}
+    .sidebar .login-logo{margin: 30px 20px;display: block;}
+    .sidebar .login-logo >img{height: 32px;}
+    .sidebar li .nav-link{flex-direction: row; padding: 10px 20px;}
+    .sidebar li .nav-link img{margin-bottom: 0;}
+    .sidebar li .nav-link .img-wrapper{margin-right: 10px;}
+    .main-content{width: 100%; margin-left: 0;}
+    .open-sidebar .sidebar{left: 0;}
+    .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible; z-index: 3;}
+    .statistic-card .card-title{padding-bottom: 8px;}
+
 
 }
 
@@ -273,4 +320,5 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
     .login-form .password-field{margin-bottom: 40px;}
     .login-form .chakra-link.chakra-button{margin-bottom: 30px;}
     .btn-primary.chakra-button{padding: 8px 16px;}
+    
 }

@@ -6,6 +6,17 @@ import Innerpage from "./Pages/Innerpage";
 import theme from "./App.Theme";
 
 function App() {
+
+  // add scroll class
+  const addScrollClass = () => {
+    if (window.scrollY > 20) {
+      document.body.classList.add('page-scrolled');
+    } else {
+      document.body.classList.remove('page-scrolled');
+    }
+  };
+  window.addEventListener('scroll', addScrollClass);
+
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>

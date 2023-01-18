@@ -1,6 +1,6 @@
-import { Image, List, ListItem, Text } from "@chakra-ui/react";
+import { Hide, Image, List, ListItem, Show, Text } from "@chakra-ui/react";
 import { Link, NavLink } from "react-router-dom";
-import { dashboardActiveIcon, dashboardIcon, docsActiveIcon, docsIcon, helpActiveIcon, helpIcon, logo, logoPng, settingActiveIcon, settingIcon, timelineActiveIcon, timelineIcon, userActiveIcon, userIcon } from "../../assets/images";
+import { dashboardActiveIcon, dashboardIcon, docsActiveIcon, docsIcon, helpActiveIcon, helpIcon, loginLogo, logoPng, settingActiveIcon, settingIcon, timelineActiveIcon, timelineIcon, userActiveIcon, userIcon } from "../../assets/images";
 
 const Sidebar: React.FC = () => {
 
@@ -11,7 +11,12 @@ const Sidebar: React.FC = () => {
   return (
     <>
       <div className="sidebar">
-        <Link to="#" title="Company" className="logo"><Image src={logoPng} /></Link>
+        <Show below="md">
+          <Link to="#" title="Company" className="login-logo"><Image src={loginLogo} /></Link>
+        </Show>
+        <Hide below="md">
+          <Link to="#" title="Company" className="logo"><Image src={logoPng} /></Link>
+        </Hide>
         <List>
           <ListItem>
             <NavLink
