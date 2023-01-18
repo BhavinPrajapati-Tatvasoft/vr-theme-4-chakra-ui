@@ -7,8 +7,7 @@ import {
   docsIcon,
   helpActiveIcon,
   helpIcon,
-  loginLogo,
-  logoPng,
+  logo,
   settingActiveIcon,
   settingIcon,
   timelineActiveIcon,
@@ -25,14 +24,9 @@ const Sidebar: React.FC = () => {
   return (
     <>
       <div className="sidebar">
-        <Show below="md">
-          <Link to="#" title="Company" className="login-logo">
-            <Image src={loginLogo} />
-          </Link>
-        </Show>
         <Hide below="md">
           <Link to="#" title="Company" className="logo">
-            <Image src={logoPng} />
+            <Image src={logo} />
           </Link>
         </Hide>
         <List>

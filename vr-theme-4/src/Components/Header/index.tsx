@@ -5,7 +5,14 @@ import { Text } from "@chakra-ui/layout";
 import { Hide, Show } from "@chakra-ui/media-query";
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu";
 import { Link as customLink, Link } from "react-router-dom";
-import { adminUser, hamburgerIcon, logoPng, messageIcon, profileDownArrowIcon, searchIcon } from "../../assets/images";
+import {
+  adminUser,
+  hamburgerIcon,
+  logo,
+  messageIcon,
+  profileDownArrowIcon,
+  searchIcon,
+} from "../../assets/images";
 
 const Header: React.FC = () => {
   return (
@@ -25,8 +32,10 @@ const Header: React.FC = () => {
             icon={<Image alt="Hamburger" src={hamburgerIcon} />}
             onClick={(e) => document.body.classList.toggle("open-sidebar")}
           />
+          <Link to="#" title="Company" className="logo">
+            <Image src={logo} />
+          </Link>
         </Show>
-        <Link to="#" title="Company" className="logo"><Image src={logoPng} /></Link>
         <div className="search-wrapper">
           <Input type="text" variant="outline" placeholder="Search" />
         </div>
