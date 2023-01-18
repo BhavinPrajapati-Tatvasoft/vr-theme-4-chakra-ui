@@ -259,7 +259,8 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 /* Inner Page
 --------------------------------------------------------------------------------------------------------*/
 .innerpage h5{padding-bottom: 16px;}
-
+span.chakra-checkbox__control{transition: all 0.3s;}
+.chakra-checkbox__control >div> svg{ stroke-width: 0 !important; background-image: url('../src/assets/images/checkbox-checked-icon.svg'); background-size: 10px; height: 10px; width: 10px; transition: all 0.3s;}
 /* File Upload
 --------------------------------------------------------------------------------------------------------*/
 .file-upload-wrapper{display: flex;align-items: center;}
