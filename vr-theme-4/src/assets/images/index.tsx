@@ -26,3 +26,6 @@ export const earningCardIcon = require("./earning-card-ic.svg").default;
 export const growthCardIcon = require("./growth-card-ic.svg").default;
 export const threeDotsIcon = require("./three-dots-ic.svg").default;
 export const dataChart = require("./data-chart.png");
+export const diamondShape = require("./diamond-shape.png");
+export const pillShape = require("./pill-shape.png");
+export const roundShape = require("./round-shape-img.png");

@@ -59,7 +59,8 @@ const theme = extendTheme({
           field: {
             borderColor: "#B2B2B2",
             borderRadius: "0",
-            pr: "10",
+            height: "auto",
+            padding: "11px 0",
             color: "#FFFFFF",
             _focus: {
               borderColor: "#A555FF",
