@@ -76,7 +76,32 @@ const Login = () => {
                         </Link>
                       </TabPanel>
                       <TabPanel>
-                        <p>two!</p>
+                        <Text as="h4">Register Here</Text>
+                        <Input
+                          type="text"
+                          variant="flushed"
+                          placeholder="Username"
+                          className="username-field"
+                        />
+                        <Input
+                          type="password"
+                          variant="flushed"
+                          placeholder="Password"
+                          className="password-field"
+                        />
+                        <Button
+                          w="100%"
+                          as={Link}
+                          to="/dashboard"
+                          className="btn-primary"
+                          variant="primary"
+                          title="Login"
+                        >
+                          Register
+                        </Button>
+                        <Link to="#" title="Log In" className="primary-link">
+                          Click Here For Log In
+                        </Link>
                       </TabPanel>
                     </TabPanels>
                   </Tabs>
