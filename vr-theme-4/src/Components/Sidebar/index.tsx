@@ -1,9 +1,23 @@
 import { Image, List, ListItem, Text } from "@chakra-ui/react";
 import { Link, NavLink } from "react-router-dom";
-import { dashboardActiveIcon, dashboardIcon, docsActiveIcon, docsIcon, helpActiveIcon, helpIcon, logo, logoPng, settingActiveIcon, settingIcon, timelineActiveIcon, timelineIcon, userActiveIcon, userIcon } from "../../assets/images";
+import {
+  dashboardActiveIcon,
+  dashboardIcon,
+  docsActiveIcon,
+  docsIcon,
+  helpActiveIcon,
+  helpIcon,
+  logo,
+  logoPng,
+  settingActiveIcon,
+  settingIcon,
+  timelineActiveIcon,
+  timelineIcon,
+  userActiveIcon,
+  userIcon,
+} from "../../assets/images";
 
 const Sidebar: React.FC = () => {
-
   function closeSidebar() {
     document.body.classList.remove("open-sidebar");
   }
@@ -11,7 +25,9 @@ const Sidebar: React.FC = () => {
   return (
     <>
       <div className="sidebar">
-        <Link to="#" title="Company" className="logo"><Image src={logoPng} /></Link>
+        <Link to="#" title="Company" className="logo">
+          <Image src={logoPng} />
+        </Link>
         <List>
           <ListItem>
             <NavLink
@@ -36,7 +52,11 @@ const Sidebar: React.FC = () => {
             >
               <Text as="span" className="img-wrapper">
                 <Image src={userIcon} alt="Users" className="default-icon" />
-                <Image src={userActiveIcon} alt="Users" className="active-icon" />
+                <Image
+                  src={userActiveIcon}
+                  alt="Users"
+                  className="active-icon"
+                />
               </Text>
               <Text as="span">Users</Text>
             </NavLink>
@@ -50,7 +70,11 @@ const Sidebar: React.FC = () => {
             >
               <Text as="span" className="img-wrapper">
                 <Image src={docsIcon} alt="Docs" className="default-icon" />
-                <Image src={docsActiveIcon} alt="Docs" className="active-icon" />
+                <Image
+                  src={docsActiveIcon}
+                  alt="Docs"
+                  className="active-icon"
+                />
               </Text>
               <Text as="span">Docs</Text>
             </NavLink>
@@ -63,8 +87,16 @@ const Sidebar: React.FC = () => {
               onClick={closeSidebar}
             >
               <Text as="span" className="img-wrapper">
-                <Image src={timelineIcon} alt="Timeline" className="default-icon" />
-                <Image src={timelineActiveIcon} alt="Timeline" className="active-icon" />
+                <Image
+                  src={timelineIcon}
+                  alt="Timeline"
+                  className="default-icon"
+                />
+                <Image
+                  src={timelineActiveIcon}
+                  alt="Timeline"
+                  className="active-icon"
+                />
               </Text>
               <Text as="span">Timeline</Text>
             </NavLink>
@@ -78,7 +110,11 @@ const Sidebar: React.FC = () => {
             >
               <Text as="span" className="img-wrapper">
                 <Image src={helpIcon} alt="Help" className="default-icon" />
-                <Image src={helpActiveIcon} alt="Help" className="active-icon" />
+                <Image
+                  src={helpActiveIcon}
+                  alt="Help"
+                  className="active-icon"
+                />
               </Text>
               <Text as="span">Help</Text>
             </NavLink>
@@ -91,8 +127,16 @@ const Sidebar: React.FC = () => {
               onClick={closeSidebar}
             >
               <Text as="span" className="img-wrapper">
-                <Image src={settingIcon} alt="Settings" className="default-icon" />
-                <Image src={settingActiveIcon} alt="Settings" className="active-icon" />
+                <Image
+                  src={settingIcon}
+                  alt="Settings"
+                  className="default-icon"
+                />
+                <Image
+                  src={settingActiveIcon}
+                  alt="Settings"
+                  className="active-icon"
+                />
               </Text>
               <Text as="span">Settings</Text>
             </NavLink>
