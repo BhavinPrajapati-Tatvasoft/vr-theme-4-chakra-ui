@@ -4,9 +4,26 @@ import { Image } from "@chakra-ui/image";
 import { AspectRatio, Grid, GridItem, Text } from "@chakra-ui/layout";
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu";
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/progress";
-import { Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/table";
+import {
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+} from "@chakra-ui/table";
 import { Helmet } from "react-helmet";
-import { customersCardIcon, dataChart, earningCardIcon, greenArrowIcon, growthCardIcon, ordersCardIcon, redArrowIcon, threeDotsIcon } from "../../assets/images";
+import {
+  customersCardIcon,
+  dataChart,
+  earningCardIcon,
+  greenArrowIcon,
+  growthCardIcon,
+  ordersCardIcon,
+  redArrowIcon,
+  threeDotsIcon,
+} from "../../assets/images";
 import RevenueReport from "../../Components/Charts/revenueReport";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
@@ -29,66 +46,135 @@ const Dashboard: React.FC = () => {
             templateColumns="repeat(12, 1fr)"
             gap={{ base: "16px", lg: "20px", xl: "30px" }}
           >
-            <GridItem colSpan={{ base: 12, xl: 6, }}>
-              <Grid templateColumns="repeat(12, 1fr)" gap={{ base: "16px", lg: "20px", xl: "30px" }}>
-                <GridItem colSpan={{ base: 12, sm: 6, }}>
-                  <a href="#" title="Customers" className="statistic-card sale-up">
+            <GridItem colSpan={{ base: 12, xl: 6 }}>
+              <Grid
+                templateColumns="repeat(12, 1fr)"
+                gap={{ base: "16px", lg: "20px", xl: "30px" }}
+              >
+                <GridItem colSpan={{ base: 12, sm: 6 }}>
+                  <a
+                    href="#"
+                    title="Customers"
+                    className="statistic-card sale-up"
+                  >
                     <div className="flex-block">
                       <div>
-                        <Text as="h6" className="card-title">Customers</Text>
-                        <Text as="h4" className="card-number">45,320</Text>
-                        <Text as="span" className="data-difference"><Image src={greenArrowIcon} alt="Arrow Up" />21.25%</Text>
-                        <Text as="span" className="data-time-log">Since Last Month</Text>
+                        <Text as="h6" className="card-title">
+                          Customers
+                        </Text>
+                        <Text as="h4" className="card-number">
+                          45,320
+                        </Text>
+                        <Text as="span" className="data-difference">
+                          <Image src={greenArrowIcon} alt="Arrow Up" />
+                          21.25%
+                        </Text>
+                        <Text as="span" className="data-time-log">
+                          Since Last Month
+                        </Text>
                       </div>
-                      <Image src={customersCardIcon} alt="Card Icon" className="card-mockup" />
+                      <Image
+                        src={customersCardIcon}
+                        alt="Card Icon"
+                        className="card-mockup"
+                      />
                     </div>
                   </a>
                 </GridItem>
-                <GridItem colSpan={{ base: 12, sm: 6, }}>
-                  <a href="#" title="Orders" className="statistic-card sale-down">
+                <GridItem colSpan={{ base: 12, sm: 6 }}>
+                  <a
+                    href="#"
+                    title="Orders"
+                    className="statistic-card sale-down"
+                  >
                     <div className="flex-block">
                       <div>
-                        <Text as="h6" className="card-title">Orders</Text>
-                        <Text as="h4" className="card-number">1,245</Text>
-                        <Text as="span" className="data-difference"><Image src={redArrowIcon} alt="Arrow Down" />5.25%</Text>
-                        <Text as="span" className="data-time-log">Since Last Month</Text>
+                        <Text as="h6" className="card-title">
+                          Orders
+                        </Text>
+                        <Text as="h4" className="card-number">
+                          1,245
+                        </Text>
+                        <Text as="span" className="data-difference">
+                          <Image src={redArrowIcon} alt="Arrow Down" />
+                          5.25%
+                        </Text>
+                        <Text as="span" className="data-time-log">
+                          Since Last Month
+                        </Text>
                       </div>
-                      <Image src={ordersCardIcon} alt="Card Icon" className="card-mockup" />
+                      <Image
+                        src={ordersCardIcon}
+                        alt="Card Icon"
+                        className="card-mockup"
+                      />
                     </div>
                   </a>
                 </GridItem>
-                <GridItem colSpan={{ base: 12, sm: 6, }}>
-                  <a href="#" title="Earning" className="statistic-card sale-down">
+                <GridItem colSpan={{ base: 12, sm: 6 }}>
+                  <a
+                    href="#"
+                    title="Earning"
+                    className="statistic-card sale-down"
+                  >
                     <div className="flex-block">
                       <div>
-                        <Text as="h6" className="card-title">Earning</Text>
-                        <Text as="h4" className="card-number">$ 56,890</Text>
-                        <Text as="span" className="data-difference"><Image src={redArrowIcon} alt="Arrow Down" />3.24%</Text>
-                        <Text as="span" className="data-time-log">Since Last Month</Text>
+                        <Text as="h6" className="card-title">
+                          Earning
+                        </Text>
+                        <Text as="h4" className="card-number">
+                          $ 56,890
+                        </Text>
+                        <Text as="span" className="data-difference">
+                          <Image src={redArrowIcon} alt="Arrow Down" />
+                          3.24%
+                        </Text>
+                        <Text as="span" className="data-time-log">
+                          Since Last Month
+                        </Text>
                       </div>
-                      <Image src={earningCardIcon} alt="Card Icon" className="card-mockup" />
+                      <Image
+                        src={earningCardIcon}
+                        alt="Card Icon"
+                        className="card-mockup"
+                      />
                     </div>
                   </a>
                 </GridItem>
-                <GridItem colSpan={{ base: 12, sm: 6, }}>
+                <GridItem colSpan={{ base: 12, sm: 6 }}>
                   <a href="#" title="Growth" className="statistic-card sale-up">
                     <div className="flex-block">
                       <div>
-                        <Text as="h6" className="card-title">Growth</Text>
-                        <Text as="h4" className="card-number">+ 60.20%</Text>
-                        <Text as="span" className="data-difference"><Image src={greenArrowIcon} alt="Arrow Down" />15.89%</Text>
-                        <Text as="span" className="data-time-log">Since Last Month</Text>
+                        <Text as="h6" className="card-title">
+                          Growth
+                        </Text>
+                        <Text as="h4" className="card-number">
+                          + 60.20%
+                        </Text>
+                        <Text as="span" className="data-difference">
+                          <Image src={greenArrowIcon} alt="Arrow Down" />
+                          15.89%
+                        </Text>
+                        <Text as="span" className="data-time-log">
+                          Since Last Month
+                        </Text>
                       </div>
-                      <Image src={growthCardIcon} alt="Card Icon" className="card-mockup" />
+                      <Image
+                        src={growthCardIcon}
+                        alt="Card Icon"
+                        className="card-mockup"
+                      />
                     </div>
                   </a>
                 </GridItem>
               </Grid>
             </GridItem>
-            <GridItem colSpan={{ base: 12, xl: 6, }}>
+            <GridItem colSpan={{ base: 12, xl: 6 }}>
               <Card className="revenue-card">
                 <div className="card-heading">
-                  <Text as="h6" className="card-title">Revenue</Text>
+                  <Text as="h6" className="card-title">
+                    Revenue
+                  </Text>
                   <Menu>
                     <MenuButton
                       as={IconButton}
@@ -110,10 +196,12 @@ const Dashboard: React.FC = () => {
               </Card>
             </GridItem>
 
-            <GridItem colSpan={{ base: 12, xl: 9, }}>
+            <GridItem colSpan={{ base: 12, xl: 9 }}>
               <Card className="table-card">
                 <div className="card-heading">
-                  <Text as="h6" className="card-title">Top Selling Product</Text>
+                  <Text as="h6" className="card-title">
+                    Top Selling Product
+                  </Text>
                   <Menu>
                     <MenuButton
                       as={IconButton}
@@ -203,10 +291,12 @@ const Dashboard: React.FC = () => {
               </Card>
             </GridItem>
 
-            <GridItem colSpan={{ base: 12, xl: 3, }}>
+            <GridItem colSpan={{ base: 12, xl: 3 }}>
               <Card className="campaign-card">
                 <div className="card-heading">
-                  <Text as="h6" className="card-title">Campaign</Text>
+                  <Text as="h6" className="card-title">
+                    Campaign
+                  </Text>
                   <Menu>
                     <MenuButton
                       as={IconButton}
@@ -222,7 +312,7 @@ const Dashboard: React.FC = () => {
                     </MenuList>
                   </Menu>
                 </div>
-                <CircularProgress value={60} thickness='5px' size="300px">
+                <CircularProgress value={60} thickness="5px" size="300px">
                   <CircularProgressLabel>
                     <Text as="h3">60%</Text>
                     <Text as="h6">Progress</Text>
@@ -234,8 +324,6 @@ const Dashboard: React.FC = () => {
                 </div>
               </Card>
             </GridItem>
-
-
           </Grid>
         </div>
         {/* Main content End */}

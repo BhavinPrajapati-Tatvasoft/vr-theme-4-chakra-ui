@@ -4,7 +4,6 @@ import {
   GridItem,
   Image,
   Input,
-  Link,
   Show,
   Tab,
   TabList,
@@ -14,6 +13,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import {
   diamondShape,
   loginBanner,
@@ -32,7 +32,7 @@ const Login = () => {
         <Grid templateColumns="repeat(12, 1fr)" className="login-container">
           <GridItem colSpan={{ base: 12, lg: 6 }}>
             <div className="login-wrapper-left">
-              <Link href="#" className="login-logo" title="Logo">
+              <Link to="#" className="login-logo" title="Logo">
                 <Image src={loginLogo} alt="Logo" />
               </Link>
               <div className="login-form-outer">
@@ -63,10 +63,15 @@ const Login = () => {
                           to="/dashboard"
                           className="btn-primary"
                           variant="primary"
+                          title="Login"
                         >
                           Log in
                         </Button>
-                        <Link href="#" title="Forgot Password?">
+                        <Link
+                          to="#"
+                          title="Forgot Password?"
+                          className="primary-link"
+                        >
                           Forgot Password?
                         </Link>
                       </TabPanel>
@@ -90,17 +95,17 @@ const Login = () => {
             </GridItem>
           </Show>
         </Grid>
-      </div>
-      <div className="shape-wrapper">
-        <div className="blue shape"></div>
-        <div className="pink shape"></div>
-        <Image
-          src={diamondShape}
-          alt="Diamon Shape"
-          className="diamond-shape"
-        />
-        <Image src={pillShape} alt="Pill Shape" className="pill-shape" />
-        <Image src={roundShape} alt="Round Shape" className="round-shape" />
+        <div className="shape-wrapper">
+          <div className="blue shape"></div>
+          <div className="pink shape"></div>
+          <Image
+            src={diamondShape}
+            alt="Diamon Shape"
+            className="diamond-shape"
+          />
+          <Image src={pillShape} alt="Pill Shape" className="pill-shape" />
+          <Image src={roundShape} alt="Round Shape" className="round-shape" />
+        </div>
       </div>
     </>
   );
