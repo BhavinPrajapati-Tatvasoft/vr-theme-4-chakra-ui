@@ -258,48 +258,33 @@ const Innerpage = () => {
               </div>
 
               {/* -------- Snackbar start ---------  */}
-              <Text as="h6">Snack Bar</Text>
-              <SimpleGrid
-                gap={{ base: "4", lg: "6" }}
-                columns={{ base: 1, lg: 2 }}
-                className="snackbar-group"
-              >
+              <SimpleGrid gap={"19px"} columns={1} className="snackbar-group">
                 <Alert status="error" className="alert-error">
                   <Image src={alertErrorIcon} />
-                  <Box>
-                    <AlertDescription>
-                      This is an error Message
-                    </AlertDescription>
-                  </Box>
-                </Alert>
-                <Alert status="info" className="alert-info">
-                  <Image src={alertInfoIcon} />
-                  <Box>
-                    <AlertDescription>
-                      This is an information message!
-                    </AlertDescription>
-                  </Box>
+                  <AlertDescription>This is an error Message</AlertDescription>
                 </Alert>
                 <Alert status="warning" className="alert-warning">
                   <Image src={alertWarningIcon} />
-                  <Box>
-                    <AlertDescription>
-                      This is a warning message!
-                    </AlertDescription>
-                  </Box>
+                  <AlertDescription>
+                    This is a warning message!
+                  </AlertDescription>
+                </Alert>
+                <Alert status="info" className="alert-info">
+                  <Image src={alertInfoIcon} />
+                  <AlertDescription>
+                    This is an information message!
+                  </AlertDescription>
                 </Alert>
                 <Alert status="success" className="alert-success">
                   <Image src={alertSuccessIcon} />
-                  <Box>
-                    <AlertDescription>
-                      This is a Success message!
-                    </AlertDescription>
-                  </Box>
+                  <AlertDescription>
+                    This is a Success message!
+                  </AlertDescription>
                 </Alert>
               </SimpleGrid>
 
               {/* -------- Button Group start ---------  */}
-              <Text as="h6">CTA</Text>
+              <Text as="h6">Call to Action</Text>
               <HStack spacing="20px" className="btn-groups">
                 <Button variant="primary" className="btn-primary">
                   Primary
@@ -317,7 +302,6 @@ const Innerpage = () => {
                     <Tab>Tab 1</Tab>
                     <Tab>Tab 2</Tab>
                     <Tab>Tab 3</Tab>
-                    <Tab>Tab 4</Tab>
                   </TabList>
                   <TabPanels>
                     <TabPanel>
@@ -329,24 +313,18 @@ const Innerpage = () => {
                       look like readable English. Many desktop publishing
                       packages and web page editors now use Lorem Ipsum as their
                       default model text, and a search for 'lorem ipsum' will
-                      uncover many web sites still in their infancy.
+                      uncover many web sites still in their infancy. Various
+                      versions have evolved over the years, sometimes by
+                      accident, sometimes on purpose (injected humour and the
+                      like). It is a long established fact that a reader will be
+                      distracted. It is a long established fact that a reader
+                      will be distracted.
                     </TabPanel>
                     <TabPanel>
                       Many desktop publishing packages and web page editors now
                       use Lorem Ipsum as their default model text, and a search
                       for 'lorem ipsum' will uncover many web sites still in
                       their infancy.
-                    </TabPanel>
-                    <TabPanel>
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout. The point of using Lorem Ipsum is that it
-                      has a more-or-less normal distribution of letters, as
-                      opposed to using 'Content here, content here', making it
-                      look like readable English. Many desktop publishing
-                      packages and web page editors now use Lorem Ipsum as their
-                      default model text, and a search for 'lorem ipsum' will
-                      uncover many web sites still in their infancy.
                     </TabPanel>
                     <TabPanel>
                       It is a long established fact that a reader will be

@@ -246,7 +246,24 @@ const theme = extendTheme({
           marginLeft: "9px",
           color: "#B2B2B2",
         },
-        control: {},
+        control: {
+          padding: "1",
+          borderColor: "#B2B2B2",
+          borderWidth: "2px",
+          borderRadius: "2px",
+          _focus: {
+            boxShadow: "none",
+            borderColor: "#A555FF",
+          },
+          _checked: {
+            background: "transparent",
+            borderColor: "#A555FF",
+            _hover: {
+              background: "transparent",
+              borderColor: "#A555FF",
+            },
+          },
+        },
       },
       sizes: {
         md: {
@@ -254,6 +271,78 @@ const theme = extendTheme({
             fontSize: "15px",
           },
         },
+      },
+    },
+    Alert: {
+      variant: {
+        success: {
+          background: "red",
+        },
+      },
+      baseStyle: {
+        container: {
+          border: "1px solid",
+          padding: "9px 10px",
+          "&.alert-error": {
+            bg: "rgba(255, 53, 53, 0.2)",
+            borderColor: "#FF3535",
+            color: "#FF3535",
+          },
+          "&.alert-info": {
+            bg: "rgba(55, 219, 255, 0.2)",
+            borderColor: "#37DBFF",
+            color: "#37DBFF",
+          },
+          "&.alert-warning": {
+            bg: "rgba(255, 199, 55, 0.2)",
+            borderColor: "#FFC737",
+            color: "#FFC737",
+          },
+          "&.alert-success": {
+            bg: "rgba(101, 255, 135, 0.2)",
+            borderColor: "#65FF87",
+            color: "#65FF87",
+          },
+        },
+        description: {
+          lineHeight: "20px",
+          marginLeft: "8px",
+        },
+      },
+    },
+    Tabs: {
+      variants: {
+        line: {
+          tab: {
+            fontSize: "20px",
+            fontWeight: "400",
+            lineHeight: "26px",
+            color: "#CFD2DC",
+            borderBottomWidth: "3px",
+            _selected: {
+              color: "#A555FF",
+            },
+            _focus: {
+              boxShadow: "none",
+              color: "#A555FF",
+            },
+            _hover: {
+              color: "#A555FF",
+            },
+          },
+          tablist: {
+            borderBottom: "1px solid rgba(255,255,255,0.5)",
+            borderColor: "rgba(255,255,255,0.5)",
+          },
+          tabpanel: {
+            color: "#FFFFFF",
+            lineHeight: "25px",
+            padding: "24px 0 0",
+          },
+        },
+      },
+      defaultProps: {
+        variant: "line",
       },
     },
   },
