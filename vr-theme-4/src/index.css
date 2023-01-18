@@ -72,7 +72,7 @@ body {min-width: 375px; min-height: 100vh;}
 body {-ms-overflow-style: scrollbar; -webkit-font-smoothing: subpixel-antialiased;}
 
 .wrapper {min-height: 100vh;}
-a {color: #000;text-decoration: none;}
+a {color: #000;text-decoration: none !important;}
 
 h1,
 h2,
@@ -147,15 +147,39 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 
 /* Login Page
 --------------------------------------------------------------------------------------------------------*/
-.login-wrapper{min-height: 100vh;}
-.login-form{padding: 22px 38px 41px;}
+.login-wrapper{min-height: 100vh; position: relative; z-index: 1;}
+.shape-wrapper{position: fixed; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;}
+.shape-wrapper .shape{ position: absolute; height: 498px; width: 498px; border-radius: 50%; filter: blur(250px);}
+.shape-wrapper .shape.blue{background-color: #0081FF; top: -93px; left: -104px;}
+.shape-wrapper .shape.pink{background-color: #C634DA; bottom: -168px; right: -155px;}
+.shape-wrapper .diamond-shape, .shape-wrapper .pill-shape,.shape-wrapper .round-shape{position: absolute;}
+.shape-wrapper .diamond-shape{right: 32px; bottom: 80px;}
+.shape-wrapper .round-shape{right: calc(50% + 229px); bottom: 160px;}
+.shape-wrapper .pill-shape{left: 95px; bottom: 397px;}
+.login-container{height: 100vh;}
+.login-wrapper-left{max-width: 420px; width: 100%; margin: 0 auto; padding-top: 98px; padding-bottom: 133px; padding: 98px 20px 133px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
+.login-wrapper-left .login-logo{display: inline-block; padding-bottom: 20px; align-self: start;}
+.login-wrapper-right{display: flex; height: 100%;}
+.login-wrapper-right img{margin: auto 0;}
+.login-form-outer{position: relative;}
+.login-form-outer::after, .login-form-outer::before, .login-form::after, .login-form::before{content: ''; position: absolute;}
+.login-form-outer::after{ left: 0; top: -2px; right: 0; height: 2px; background:linear-gradient(90deg, rgba(226,57,241,1) 0%, rgba(34,150,203,1) 100%);}
+.login-form-outer::before{left: 0; bottom: -2px; right: 0; height: 2px; background:linear-gradient(90deg, rgba(226,57,241,1) 0%, rgba(34,150,203,1) 100%);}
+.login-form::after{ left: -2px; top: -2px; bottom: -2px; width: 2px; background:#E239F1;}
+.login-form::before{right: -2px; top: -2px; bottom: -2px; width: 2px; background:#2296CB;}
+.login-form{padding: 22px 41px 38px; background-color: rgba(0, 0, 0, 0.2);}
 .login-tab .chakra-tabs__tab{text-transform: uppercase; color: #fff; opacity: 0.7; font-size: 16px; line-height: 22px; font-weight: 600; padding: 16px 0;}
 .login-tab .chakra-tabs__tab:not(:first-child){margin-left: 46px;}
 .login-tab .chakra-tabs__tablist{border: none;}
 .login-tab .chakra-tabs__tab[aria-selected=true], .login-tab .chakra-tabs__tab[data-selected]{ border-color: #fff; opacity: 1; }
 .login-tab .chakra-tabs__tab-panel{padding: 0;}
-.login-tab h4{padding-top: 50px;}
-
+.login-tab h4{padding-top: 50px; padding-bottom: 24px;}
+.login-form .username-field{margin-bottom: 33px;}
+.login-form .password-field{margin-bottom: 50px;}
+.login-form .chakra-link{color: #B2B2B2;}
+.login-form .chakra-link.chakra-button{margin-bottom: 37px;}
+.login-wrapper .copyright-text{color: #FFFFFF; opacity: 0.7; padding-top: 20px;}
+.filter{height: 50px; width: 50px; background-color: #0081FF; filter: blur(250px);}
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
 .sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 4;}
@@ -209,5 +233,13 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 }
 
 @media (max-width:575px) {
-
+    h4.chakra-text{font-size: 20px; line-height: 24px;}
+    .login-wrapper-left .login-logo img{max-width: 170px;}
+    .login-form{padding: 20px;}
+    .login-tab .chakra-tabs__tab{padding: 8px 0;}
+    .login-tab h4{padding-top: 30px;padding-bottom: 16px;}
+    .login-form .username-field{margin-bottom: 24px;}
+    .login-form .password-field{margin-bottom: 40px;}
+    .login-form .chakra-link.chakra-button{margin-bottom: 30px;}
+    .btn-primary.chakra-button{padding: 8px 16px;}
 }

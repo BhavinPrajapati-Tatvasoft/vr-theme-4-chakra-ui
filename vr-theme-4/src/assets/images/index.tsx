@@ -18,3 +18,6 @@ export const searchIcon = require("./search-ic.svg").default;
 export const profileDownArrowIcon = require("./menu-arrow-down-ic.svg").default;
 export const adminUser = require("./user-ic.png");
 export const messageIcon = require("./notification-ic.png");
+export const diamondShape = require("./diamond-shape.png");
+export const pillShape = require("./pill-shape.png");
+export const roundShape = require("./round-shape-img.png");
