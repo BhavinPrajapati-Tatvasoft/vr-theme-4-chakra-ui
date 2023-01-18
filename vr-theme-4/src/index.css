@@ -234,7 +234,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 --------------------------------------------------------------------------------------------------------*/
 .main-content{ padding: 110px 37px 35px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
 
-.statistic-card{background-color: #0F1E4E;display: flex;align-items: center; justify-content: space-between;padding: 22px 30px 24px; border: 1px solid transparent; height: 100%;transition: all 300ms ease;position: relative;}
+.statistic-card{background-color: #0F1E4E;display: flex;align-items: center; justify-content: space-between;padding: 22px 30px 24px; border: 1px solid transparent; height: 100%;transition: all 300ms ease;position: relative;z-index: 0;}
 .statistic-card .data-difference{display: flex;align-items: center;padding-bottom: 3px;}
 .statistic-card .card-title{padding-bottom: 16px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 110px;}
 .statistic-card .card-number{padding-bottom: 21px;font-weight: 700;}
@@ -243,7 +243,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .sale-up .data-difference{color: #65FF87;}
 .sale-down .data-difference{color: #FF3535;}
 .revenue-card .data-chart{height: 290px;}
-.statistic-card::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: rgba(255,255,255, 0.08); transition: all 300ms ease; z-index: 0;}
+.statistic-card::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: rgba(255,255,255, 0.05); transition: all 300ms ease; z-index: -1;}
 .statistic-card:hover::after,.statistic-card:focus::after{width: 100%;}
 
 .table-card .card-heading{padding-bottom: 8px;}
