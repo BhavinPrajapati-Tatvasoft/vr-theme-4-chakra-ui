@@ -121,28 +121,41 @@ h3.chakra-text{font-size: 35px; line-height: 40px;}
 h4.chakra-text{font-size: 25px; line-height: 30px; font-weight: 600;}
 h5.chakra-text{font-size: 24px; line-height: 30px; font-weight: 600;}
 h6.chakra-text{font-size: 20px; line-height: 26px;}
+.page-title{ padding-bottom: 20px;}
+.card-title{color: #CFD2DC;}
+.card-heading{display: flex;align-items: center;justify-content: space-between;padding: 0 0 18px;}
+.card-heading .chakra-menu__menu-button{background-color: transparent; border: 0; border-radius: 50%;width: 30px;height: 30px;min-width: 0;margin-top: 2px;margin-right: -6px;}
+.card-heading .chakra-menu__menu-button:hover,
+.card-heading .chakra-menu__menu-button:active,
+.card-heading .chakra-menu__menu-button:focus{background-color: rgba(255,255,255, 0.08);}
+.card-heading .chakra-menu__menu-button[data-active]{background-color: rgba(255,255,255, 0.08); border-color: transparent;}
 
 /* Custom Card
 --------------------------------------------------------------------------------------------------------*/
 
 /* Button
 --------------------------------------------------------------------------------------------------------*/
+.icon-btn.chakra-button{width: 48px; height: 48px; min-width: 0; border-radius: 8px;}
+.icon-btn.chakra-button:hover,
+.icon-btn.chakra-button:focus{background-color: rgba(255,255,255, 0.08);}
 
 /* Header
 --------------------------------------------------------------------------------------------------------*/
-.header{display: flex;align-items: center;background-color: #0F1E4E; padding: 15px 26px 14px 0;}
-.header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-left: 130px;}
-.header .search-wrapper .chakra-input{border-radius: 10px; border-color: transparent; padding: 8px 8px 8px 30px; height: 48px; color: #FFFFFF; background-color: transparent; background-image: url('./assets/images/search-ic.svg'); background-position: left 8px center; background-repeat: no-repeat; font-family: inherit;}
+.header{display: flex;align-items: center;background-color: #0F1E4E; padding: 15px 26px 14px 0;position: fixed;top: 0;left: 0;right: 0;z-index: 1;}
+.header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-left: 116px;}
+.header .search-wrapper .chakra-input{border-radius: 10px; border-color: transparent; padding: 8px 8px 8px 35px; height: 48px; color: #FFFFFF; background-color: transparent; background-image: url('./assets/images/search-ic.svg'); background-position: left 8px center; background-repeat: no-repeat; font-family: inherit; font-size: 18px; line-height: 24px;}
 .header .search-wrapper .chakra-input:focus{border-color: #59B997 !important;}
 .header .search-wrapper .chakra-input::placeholder{color: #FFFFFF;}
-.header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;}
+.header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;font-size: 18px; line-height: 24px;letter-spacing: 0px;}
 .header .chakra-menu__menu-button:active,
 .header .chakra-menu__menu-button[data-active]{background-color: transparent; border-color: transparent;}
 .header .chakra-menu__menu-button >span{display: flex;align-items: center;}
 .header .chakra-menu__menu-button .user-profile-pic{margin-right: 8px;}
 .header .chakra-menu__menu-button .chakra-button__icon{margin-left: 8px;}
 .header .right-content{margin-left: auto;display: flex;align-items: center;}
-.header .icon-btn{margin-right: 26px;border: transparent;}
+.header .icon-btn{margin-right: 10px;border: transparent;}
+.header .chakra-menu__menu-button:hover,.header .chakra-menu__menu-button:focus{background-color: rgba(255,255,255, 0.08);}
+
 
 
 /* Login Page
@@ -183,7 +196,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
 .sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 4;}
-.sidebar li .nav-link{display: flex;flex-direction: column; align-items: center; color: #FFFFFF; padding: 15px; position: relative;margin-bottom: 16px;}
+.sidebar li .nav-link{display: flex;flex-direction: column; align-items: center; color: #FFFFFF; padding: 15px; position: relative;margin-bottom: 8px;}
 .sidebar li:last-child .nav-link{margin-bottom: 0;}
 .sidebar li .nav-link .img-wrapper{position: relative;}
 .sidebar li .nav-link img{display: block;width: 30px;height: 30px;margin-bottom: 9px;}
@@ -194,7 +207,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .sidebar li .nav-link.active .chakra-text{background: -webkit-linear-gradient(#E239F1, #2296CB);-webkit-background-clip: text;-webkit-text-fill-color: transparent;}
 .open-sidebar .sidebar{left: calc(-1 * var(--sidebar-width));}
 .sidebar li a:not(.active):focus {background-color: rgba(0, 0, 0, 0.08);}
-.sidebar .logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;margin: 30px auto 52px;}
+.sidebar .logo{width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;margin: 30px auto 42px;}
 .logo > img{display: block;}
 .sidebar li .nav-link.active .active-icon{opacity: 1;}
 .sidebar li .nav-link.active .default-icon{opacity: 0;}
@@ -202,7 +215,25 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
+.main-content{ padding: 110px 37px 40px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
 
+.statistic-card{background-color: #0F1E4E;display: flex;flex-direction: column;padding: 20px 30px 24px; border: 1px solid transparent;}
+.statistic-card .flex-block{display: flex;align-items: center;justify-content: space-between;}
+.statistic-card .data-difference{display: flex;align-items: center;padding-bottom: 3px;}
+.statistic-card .card-title{padding-bottom: 16px;}
+.statistic-card .card-number{padding-bottom: 21px;font-weight: 700;}
+.statistic-card .data-difference > img{display: block;margin-right: 5px;}
+.statistic-card .data-time-log{color: #CFD2DC;font-size: 12px;line-height: 16px;}
+.sale-up .data-difference{color: #65FF87;}
+.sale-down .data-difference{color: #FF3535;}
+.revenue-card .data-chart{height: 290px;}
+
+.table-card .card-heading{padding-bottom: 8px;}
+.campaign-card .chakra-progress{margin: 0 auto; display: block;}
+.campaign-card .chakra-progress svg{width: 100%; max-width: 254px; height: 254px;margin: 0 auto;}
+.campaign-card .chakra-progress div{color: #FFFFFF;}
+.campaign-card .bottom-text{text-align: center; color: #CFD2DC;}
+.campaign-card .bottom-text h5{font-size: 22px;padding-bottom: 10px;font-weight: 600;}
 /* Inner Page
 --------------------------------------------------------------------------------------------------------*/
 

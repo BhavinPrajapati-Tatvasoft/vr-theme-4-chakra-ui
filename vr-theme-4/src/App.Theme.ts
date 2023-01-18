@@ -5,7 +5,7 @@ const theme = extendTheme({
     global: {
       // styles for the `body`
       body: {
-        bg: "#0F1E4E",
+        bg: "#051444",
         color: "#CFD2DC",
         fontFamily: "Open Sans, sans-serif",
         fontSize: "15px",
@@ -14,7 +14,10 @@ const theme = extendTheme({
       },
     },
   },
-  colors: {},
+  colors: {
+    primary: "#0F1E4E",
+    gradient: "linear-gradient(90.11deg, #E239F1 0%, #2296CB 101.9%);"
+  },
   components: {
     Button: {
       baseStyle: {
@@ -78,6 +81,80 @@ const theme = extendTheme({
       },
       defaultProps: {
         variant: "flushed",
+      },
+    },
+    Menu: {
+      baseStyle: {
+        item: {
+          bg: "#0F1E4E",
+          color: "#FFFFFF",
+          padding: "10px 20px",
+          _focus: {
+            backgroundColor: "rgba(255,255,255, 0.08)",
+          },
+          _hover: {
+            backgroundColor: "rgba(255,255,255, 0.08)",
+          },
+        },
+        list: {
+          minWidth: "156px",
+          padding: "10px 0",
+          borderRadius: "0",
+          bg: "#0F1E4E",
+          boxShadow: "0px 0px 19px rgba(0, 0, 0, 0.17)",
+        },
+      },
+    },
+    Card: {
+      variants: {
+        outline: {
+          container: {
+            borderRadius: "0",
+            border: "0",
+            bg: "#0F1E4E",
+            padding: "22px 30px 28px",
+            height: "100%"
+          },
+        },
+      },
+      defaultProps: {
+        variant: "outline",
+      },
+    },
+    Table: {
+      baseStyle: {
+        container: {
+          minWidth: "calc(100vw - 64px)",
+        },
+      },
+      variants: {
+        simple: {
+          th: {
+            padding: "14px 14px 14px 0",
+            fontSize: "15px",
+            linbeHeight: "20px",
+            textTransform: "uppercase",
+            color: "#9B9B9B",
+            fontWeight: "400",
+            borderColor: "rgba(255,255,255,0.2)",
+          },
+          td: {
+            padding: "12px 14px 12px 0",
+            fontSize: "15px",
+            fontWeight: 400,
+            color: "#CFD2DC",
+            verticalAlign: "middle",
+            borderColor: "rgba(255,255,255,0.2)",
+          },
+          tr: {
+            "&:last-child": {
+              td: { borderBottom: "0", }
+            },
+          }
+        },
+      },
+      defaultProps: {
+        variant: "simple",
       },
     },
   },
