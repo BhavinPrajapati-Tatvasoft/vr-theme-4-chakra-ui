@@ -146,6 +146,9 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 .secondary-section{padding-top: 52px;}
 .chakra-button.password-iconbutton{background-color: transparent; border-radius: 50%; width: 30px; height: 30px; min-width: auto;}
 .chakra-button.password-iconbutton:hover, .chakra-button.password-iconbutton:focus{background-color: #172e78;}
+.chakra-card .chakra-table__container{max-width: calc(100vw - 64px);}
+.open-sidebar,.show-searchbar{overflow: hidden;}
+
 /* Custom Card
 --------------------------------------------------------------------------------------------------------*/
 
@@ -213,6 +216,7 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
 .sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 1;}
+.sidebar ul{height: 100%;}
 .sidebar li .nav-link{display: flex;flex-direction: column; align-items: center; color: #FFFFFF; padding: 15px; position: relative;margin-bottom: 8px;}
 .sidebar li:last-child .nav-link{margin-bottom: 0;}
 .sidebar li .nav-link .img-wrapper{position: relative;}
@@ -305,23 +309,24 @@ span.chakra-checkbox__control{transition: all 0.3s;}
 
 @media (max-width:767px) {
     h3.chakra-text{font-size: 26px; line-height: 30px;}
-    .header{padding: 10px 4px; z-index: 2;left: 0;}
+    .header{padding: 10px 4px;left: 0;}
     .logo{width: 32px;height: 32px;}
     .icon-btn.chakra-button{width: 40px;height: 40px;}
     .header .search-wrapper{position: fixed;left: 0;right: 0;top: -100px;background-color: #051444;max-width: none; transition: all 0.3s; padding: 16px; z-index: 1; margin-left: 0;}
     .header .search-wrapper .chakra-input{background-color: #0F1E4E;}
     .header .icon-btn{margin-right: 8px;}
     .show-searchbar .search-wrapper{top: 0;}
-    .sidebar{left: calc(-1 * var(--sidebar-width) - 100px); width: calc(var(--sidebar-width) + 100px); z-index: 4;}
+    .sidebar{left: calc(-1 * var(--sidebar-width) - 100px); width: calc(var(--sidebar-width) + 100px);}
+    .sidebar ul{padding-top: 8px;}
     .sidebar .login-logo{margin: 30px 20px;display: block;}
     .sidebar .login-logo >img{height: 32px;}
-    .sidebar li .nav-link{flex-direction: row; padding: 10px 20px;}
+    .sidebar li .nav-link{flex-direction: row; padding: 8px 16px;}
     .sidebar li .nav-link img{margin-bottom: 0;}
     .sidebar li .nav-link .img-wrapper{margin-right: 10px;width: auto;}
     .sidebar li .nav-link span{justify-content: flex-start;}
     .main-content{width: 100%; margin-left: 0;}
     .open-sidebar .sidebar{left: 0;}
-    .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible; z-index: 3;}
+    .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible;}
     .statistic-card .card-title{padding-bottom: 8px;}
 
 

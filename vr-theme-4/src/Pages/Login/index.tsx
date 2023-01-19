@@ -37,7 +37,7 @@ const Login = () => {
     );
     loginMockup.fromTo(
       ".login-form-outer",
-      { scale: 0, opacity: 0 },
+      { scale: 0.7, opacity: 0 },
       { scale: 1, opacity: 1, }
     );
     loginMockup.fromTo(
@@ -150,7 +150,7 @@ const Login = () => {
                 <Image src={loginBanner} alt="Login Banner"
                   onLoad={(e) => {
                     let loginImg = gsap.timeline();
-                    loginImg.fromTo(".login-wrapper-right .chakra-image", { opacity: 0, scale: 0, rotation: 720 }, { opacity: 1, scale: 1, rotation: 0, duration: 1.5 })
+                    loginImg.fromTo(".login-wrapper-right .chakra-image", { opacity: 0, scale: 0, rotation: 360 }, { opacity: 1, scale: 1, rotation: 0, duration: 1.5 })
                   }} />
               </div>
             </GridItem>

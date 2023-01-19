@@ -167,11 +167,6 @@ const theme = extendTheme({
       },
     },
     Table: {
-      baseStyle: {
-        container: {
-          minWidth: "calc(100vw - 64px)",
-        },
-      },
       variants: {
         simple: {
           th: {

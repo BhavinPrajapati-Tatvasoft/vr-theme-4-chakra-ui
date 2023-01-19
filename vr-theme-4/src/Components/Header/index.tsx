@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             aria-label="toggle-menu"
             className="toggle-button icon-btn"
             icon={<Image alt="Hamburger" src={hamburgerIcon} />}
-            onClick={(e) => document.body.classList.toggle("open-sidebar")}
+            onClick={(e) => {document.body.classList.add("open-sidebar");document.body.classList.remove("show-searchbar");}}
           />
           <Link to="#" title="Company" className="logo">
             <Image src={logo} />
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
               aria-label="Search"
               className="search-toggle icon-btn"
               icon={<Image alt="Search" src={searchIcon} />}
-              onClick={(e) => document.body.classList.toggle("show-searchbar")}
+              onClick={(e) => {document.body.classList.toggle("show-searchbar");document.body.classList.remove("open-sidebar");}}
             />
           </Show>
           <IconButton
