@@ -186,7 +186,7 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .shape-wrapper .shape.pink{background-color: #C634DA; bottom: -168px; right: -155px;}
 .shape-wrapper .diamond-shape, .shape-wrapper .pill-shape,.shape-wrapper .round-shape{position: absolute;}
 .shape-wrapper .diamond-shape{right: 32px; bottom: 80px;}
-.shape-wrapper .round-shape{right: calc(50% + 229px); bottom: 160px;}
+.shape-wrapper .round-shape{bottom: 160px;left: 35%;}
 .shape-wrapper .pill-shape{left: 95px; bottom: 397px;}
 .login-container{min-height: 100vh; position: relative; z-index: 1;}
 .login-wrapper-left{max-width: 460px; width: 100%; margin-left: 24%; padding: 98px 20px 133px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
