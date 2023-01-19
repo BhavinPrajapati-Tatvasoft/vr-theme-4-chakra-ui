@@ -163,7 +163,7 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 --------------------------------------------------------------------------------------------------------*/
 .header{display: flex;align-items: center;background-color: #0F1E4E; padding: 15px 26px 14px 0;position: fixed;top: 0;left: var(--sidebar-width);right: 0;z-index: 1;}
 .header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-left: 28px;}
-.header .search-wrapper .chakra-input{border-radius: 10px; border-color: transparent; padding: 8px 8px 8px 35px; height: 48px; color: #FFFFFF; background-color: transparent; background-image: url('./assets/images/search-ic.svg'); background-position: left 8px center; background-repeat: no-repeat; font-family: inherit; font-size: 18px; line-height: 24px;}
+.header .search-wrapper .chakra-input{border-radius: 0; border-color: transparent; padding: 8px 8px 8px 35px; height: 48px; color: #FFFFFF; background-color: transparent; background-image: url('./assets/images/search-ic.svg'); background-position: left 8px center; background-repeat: no-repeat; font-family: inherit; font-size: 18px; line-height: 24px;}
 .header .search-wrapper .chakra-input:focus{border-color: #A555FF !important;}
 .header .search-wrapper .chakra-input::placeholder{color: #FFFFFF;}
 .header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;font-size: 18px; line-height: 24px;letter-spacing: 0px;}

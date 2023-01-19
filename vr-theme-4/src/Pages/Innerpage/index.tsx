@@ -1,7 +1,6 @@
 import {
   Alert,
   AlertDescription,
-  Box,
   Button,
   Card,
   Checkbox,
@@ -41,11 +40,27 @@ import {
 } from "../../assets/images";
 import Header from "../../Components/Header";
 import Sidebar from "../../Components/Sidebar";
+import gsap from "gsap";
+const { useLayoutEffect } = React;
 
 const Innerpage = () => {
   //password input state
   const [showPassword, setShowPassword] = React.useState(false);
   const handlePasswordClick = () => setShowPassword(!showPassword);
+  //GSAP Animation
+  useLayoutEffect(() => {
+    let pageText = gsap.timeline();
+    pageText.fromTo(
+      ".page-title",
+      { y: "-40px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1 }
+    );
+    pageText.fromTo(
+      ".innerpage h5",
+      { y: "20px", opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.3 }
+    );
+  }, []);
   return (
     <>
       <Helmet>

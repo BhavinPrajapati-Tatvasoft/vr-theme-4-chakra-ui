@@ -66,7 +66,6 @@ const Login = () => {
           const item = parallaxItems[i];
           const speedX = parseInt(item.getAttribute("data-speed-x") as string);
           const speedY = parseInt(item.getAttribute("data-speed-y") as string);
-
           if (speedX && speedY) {
             TweenMax.set(item, {
               x: ((item as HTMLElement).offsetLeft + pageX * speedX) * fixer,

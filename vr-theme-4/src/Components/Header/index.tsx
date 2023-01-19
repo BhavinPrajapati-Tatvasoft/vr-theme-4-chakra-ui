@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           </Link>
         </Show>
         <div className="search-wrapper">
-          <Input type="search" variant="outline" placeholder="Search" />
+          <Input type="search" variant="flushed" placeholder="Search" />
         </div>
         <div className="right-content">
           <Show below="md">
