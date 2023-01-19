@@ -60,7 +60,18 @@ const theme = extendTheme({
           color: "#ffffff",
           border: "1px solid #FFFFFF",
           textTransform: "uppercase",
+          transition: "all 0.3s",
           padding: "11px 30px",
+          _hover: {
+            bg: "transparent",
+            borderColor: "#A555FF",
+            color: "#A555FF",
+          },
+          _focus: {
+            bg: "transparent",
+            borderColor: "#A555FF",
+            color: "#A555FF",
+          },
         },
       },
       defaultProps: {},
@@ -227,6 +238,8 @@ const theme = extendTheme({
             width: "6px",
             height: "6px",
           },
+          _focus: { boxShadow: "0 0 0 5px rgb(165 85 255 / 20%)" },
+          _hover: { boxShadow: "0 0 0 5px rgb(165 85 255 / 20%)" },
           _checked: {
             backgroundColor: "transparent",
             borderColor: "#A555FF",
@@ -236,7 +249,7 @@ const theme = extendTheme({
               height: "6px",
             },
             _hover: {
-              boxShadow: "none",
+              boxShadow: "0 0 0 5px rgb(165 85 255 / 20%)",
               backgroundColor: "transparent",
               borderColor: "#A555FF",
             },
@@ -255,8 +268,9 @@ const theme = extendTheme({
           borderColor: "#B2B2B2",
           borderWidth: "2px",
           borderRadius: "2px",
+          _hover: { boxShadow: "0 0 0 5px rgb(165 85 255 / 20%)" },
           _focus: {
-            boxShadow: "none",
+            boxShadow: "0 0 0 5px rgb(165 85 255 / 20%)",
             borderColor: "#A555FF",
           },
           _checked: {

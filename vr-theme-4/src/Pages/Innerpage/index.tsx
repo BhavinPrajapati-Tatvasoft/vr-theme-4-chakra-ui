@@ -44,8 +44,6 @@ import Sidebar from "../../Components/Sidebar";
 
 const Innerpage = () => {
   //password input state
-  const [show, setShow] = React.useState(false);
-  const handleClick = () => setShow(!show);
   const [showPassword, setShowPassword] = React.useState(false);
   const handlePasswordClick = () => setShowPassword(!showPassword);
   return (
@@ -60,7 +58,8 @@ const Innerpage = () => {
           <Text as="h3" className="page-title">
             Users
           </Text>
-          <Card className="revenue-card">
+          <Card>
+            {/* -------- One column start ---------  */}
             <Text as="h5" pt={{ lg: 1 }} pb={{ base: "10px", sm: "16px" }}>
               One Column
             </Text>
@@ -120,19 +119,20 @@ const Innerpage = () => {
                 <GridItem colSpan={{ base: 12, md: 3 }}>
                   <InputGroup>
                     <Input
-                      type={show ? "text" : "password"}
+                      type={showPassword ? "text" : "password"}
                       placeholder="Password"
                     />
-                    <InputRightElement>
+                    <InputRightElement className="password-iconbutton">
                       <IconButton
                         aria-label="Password Icon"
-                        onClick={handleClick}
+                        onClick={handlePasswordClick}
                         icon={
                           <Image
-                            src={show ? showPasswordIcon : hidePasswordIcon}
+                            src={
+                              showPassword ? showPasswordIcon : hidePasswordIcon
+                            }
                           />
                         }
-                        className="password-iconbutton"
                       />
                     </InputRightElement>
                   </InputGroup>

@@ -9,7 +9,7 @@ import {
   adminUser,
   hamburgerIcon,
   logo,
-  messageIcon,
+  notificationIcon,
   profileDownArrowIcon,
   searchIcon,
 } from "../../assets/images";
@@ -30,7 +30,10 @@ const Header: React.FC = () => {
             aria-label="toggle-menu"
             className="toggle-button icon-btn"
             icon={<Image alt="Hamburger" src={hamburgerIcon} />}
-            onClick={(e) => {document.body.classList.add("open-sidebar");document.body.classList.remove("show-searchbar");}}
+            onClick={(e) => {
+              document.body.classList.add("open-sidebar");
+              document.body.classList.remove("show-searchbar");
+            }}
           />
           <Link to="#" title="Company" className="logo">
             <Image src={logo} />
@@ -46,14 +49,17 @@ const Header: React.FC = () => {
               aria-label="Search"
               className="search-toggle icon-btn"
               icon={<Image alt="Search" src={searchIcon} />}
-              onClick={(e) => {document.body.classList.toggle("show-searchbar");document.body.classList.remove("open-sidebar");}}
+              onClick={(e) => {
+                document.body.classList.toggle("show-searchbar");
+                document.body.classList.remove("open-sidebar");
+              }}
             />
           </Show>
           <IconButton
             variant="outline"
-            aria-label="Message"
+            aria-label="Notification"
             className="icon-btn"
-            icon={<Image alt="Message" src={messageIcon} />}
+            icon={<Image alt="Notification" src={notificationIcon} />}
           />
           <Menu>
             <MenuButton

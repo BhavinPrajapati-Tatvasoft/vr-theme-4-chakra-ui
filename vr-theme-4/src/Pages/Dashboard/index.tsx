@@ -17,7 +17,6 @@ import {
 import { Helmet } from "react-helmet";
 import {
   customersCardIcon,
-  dataChart,
   earningCardIcon,
   greenArrowIcon,
   growthCardIcon,
@@ -58,7 +57,6 @@ const Dashboard: React.FC = () => {
       { y: "40px", opacity: 0 },
       { y: 0, opacity: 1, stagger: 0.3 }
     );
-    
   }, []);
   return (
     <>
@@ -173,7 +171,12 @@ const Dashboard: React.FC = () => {
                         Growth
                       </Text>
                       <Text as="h4" className="card-number">
-                        <CountUp end={60.20} prefix="+ " suffix="%" decimals={2} />
+                        <CountUp
+                          end={60.2}
+                          prefix="+ "
+                          suffix="%"
+                          decimals={2}
+                        />
                       </Text>
                       <Text as="span" className="data-difference">
                         <Image src={greenArrowIcon} alt="Arrow Down" />

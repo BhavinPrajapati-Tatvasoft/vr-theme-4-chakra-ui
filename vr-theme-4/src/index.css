@@ -108,16 +108,13 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {-webkit-appearance: none;}
 
 /* width */
-::-webkit-scrollbar {width: 6px;}
-  
+::-webkit-scrollbar {width: 4px; height: 4px;}  
 /* Track */
 ::-webkit-scrollbar-track {border-radius: 10px;}
-   
 /* Handle */
-::-webkit-scrollbar-thumb {background: linear-gradient(180deg, #E239F1 0%, #2296CB 101.9%); border-radius: 10px;}
-  
+::-webkit-scrollbar-thumb {background: #2296CB; border-radius: 10px;}
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {background: linear-gradient(180, #2296CB 101.9%, #E239F1 101.9%) }
+::-webkit-scrollbar-thumb:hover {background: #2296CB; }
 
 /* FontSize
 --------------------------------------------------------------------------------------------------------*/
@@ -128,9 +125,9 @@ h6.chakra-text{font-size: 20px; line-height: 26px;}
 
 /* Common CSS
 --------------------------------------------------------------------------------------------------------*/
-.primary-link{position: relative; line-height: 20px;}
+.primary-link{position: relative; line-height: 20px; color: #B2B2B2;}
 .primary-link::after{content: ''; position: absolute; left: 0; bottom: -2px; height: 1px; transition: all 0.3s; width: 0; background: linear-gradient(90deg, rgba(226,57,241,1) 0%, rgba(34,150,203,1) 100%);}
-.primary-link:hover::after{width: 100%;}
+.primary-link:hover::after,.primary-link:focus::after{width: 100%;}
 .page-title{ padding-bottom: 20px;}
 div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16px;}
 .card-heading{display: flex;align-items: center;justify-content: space-between;padding: 0 0 18px;}
@@ -144,8 +141,9 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .secondary-section.four-col{padding-top: 30px;}
 .secondary-section.other-section{padding-top: 54px;}
 .secondary-section.tab-wrapper{padding-top: 58px;}
-.chakra-button.password-iconbutton{background-color: transparent; border-radius: 50%; width: 30px; height: 30px; min-width: auto;}
-.chakra-button.password-iconbutton:hover, .chakra-button.password-iconbutton:focus{background-color: #172e78;}
+.password-iconbutton.chakra-input__right-element{top: auto; bottom: 4px; right: 8px;}
+.password-iconbutton .chakra-button{background-color: transparent; border-radius: 50%; width: 30px; height: 30px; min-width: auto;}
+.password-iconbutton .chakra-button:hover, .password-iconbutton .chakra-button:focus{background-color: #172e78;}
 .chakra-card .chakra-table__container{max-width: calc(100vw - 64px);}
 .open-sidebar,.show-searchbar{overflow: hidden;}
 .radio-group{padding-bottom: 43px;}
@@ -302,9 +300,9 @@ span.chakra-checkbox__control{transition: all 0.3s;}
     .header .chakra-menu__menu-button .user-profile-pic{margin-right: 0;}
     .header .chakra-menu__menu-button .chakra-button__icon{display: none;}
     .header .chakra-menu__menu-button{min-width: 0; width: 48px;height: 48px; padding: 8px;display: flex;align-items: center;justify-content: center;}
-    .main-content{padding: 90px 16px 35px;}
+    .main-content{padding: 90px 16px 16px;}
     .header .search-wrapper{margin-left: 8px;}
-    .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.5); z-index: 1;}
+    .overlay{ position: fixed; top: 0; left: 0; bottom: 0; width: 100%; visibility: hidden; opacity: 0; transition: all 0.3s; background-color: rgba(0, 0, 0, 0.3); z-index: 1;}
     .statistic-card{padding: 16px;}
     .secondary-section, .secondary-section.four-col, .secondary-section.other-section, .secondary-section.tab-wrapper,.secondary-section.three-col{padding-top: 44px;}
     .snackbar-group{padding-bottom: 44px;}
