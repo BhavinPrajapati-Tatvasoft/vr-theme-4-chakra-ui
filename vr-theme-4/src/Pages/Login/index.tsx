@@ -1,3 +1,4 @@
+import * as React from "react";
 import {
   Button,
   Grid,
@@ -21,8 +22,64 @@ import {
   pillShape,
   roundShape,
 } from "../../assets/images";
+import { TweenMax } from 'gsap';
+import gsap from "gsap";
+const { useLayoutEffect } = React;
 
 const Login = () => {
+  //Animatioins
+  useLayoutEffect(() => {
+    let loginMockup = gsap.timeline();
+    loginMockup.fromTo(
+      ".login-logo",
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, }
+    );
+    loginMockup.fromTo(
+      ".login-form-outer",
+      { scale: 0.7, opacity: 0 },
+      { scale: 1, opacity: 1, }
+    );
+    loginMockup.fromTo(
+      ".chakra-tabs__tab-panel > *",
+      { opacity: 0 },
+      { opacity: 1, stagger: 0.2, }
+    );
+    loginMockup.fromTo(
+      ".login-wrapper .copyright-text",
+      { opacity: 0 },
+      { opacity: 1, }
+    );
+    
+
+
+    const parallaxContainer = document.getElementById('parallax-container');
+    const parallaxItems = document.getElementsByClassName('parallax');
+    const fixer = 0.0030;
+
+    document.addEventListener("mousemove", function (event) {
+      if (parallaxContainer) {
+        const pageX = event.pageX - (parallaxContainer.getBoundingClientRect().width * 0.5);
+        const pageY = event.pageY - (parallaxContainer.getBoundingClientRect().height * 0.5);
+
+
+        for (let i = 0; i < parallaxItems.length; i++) {
+          const item = parallaxItems[i];
+          const speedX = parseInt(item.getAttribute("data-speed-x") as string);
+          const speedY = parseInt(item.getAttribute("data-speed-y") as string);
+
+          if (speedX && speedY) {
+            TweenMax.set(item, {
+              x: ((item as HTMLElement).offsetLeft + pageX * speedX) * fixer,
+              y: ((item as HTMLElement).offsetTop + pageY * speedY) * fixer
+            });
+          }
+        }
+      }
+    }
+    );
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -115,21 +172,26 @@ const Login = () => {
           <Show above="lg">
             <GridItem colSpan={{ base: 12, lg: 6 }}>
               <div className="login-wrapper-right">
-                <Image src={loginBanner} alt="Login Banner" />
+                <Image src={loginBanner} alt="Login Banner"
+                  onLoad={(e) => {
+                    let loginImg = gsap.timeline();
+                    loginImg.fromTo(".login-wrapper-right .chakra-image", { opacity: 0, scale: 0, rotation: 360 }, { opacity: 1, scale: 1, rotation: 0, duration: 1.5 })
+                  }} />
               </div>
             </GridItem>
           </Show>
         </Grid>
-        <div className="shape-wrapper">
+        <div className="shape-wrapper" id="parallax-container">
           <div className="blue shape"></div>
           <div className="pink shape"></div>
           <Image
             src={diamondShape}
             alt="Diamon Shape"
-            className="diamond-shape"
+            className="diamond-shape parallax"
+            data-speed-x="10" data-speed-y="10"
           />
-          <Image src={pillShape} alt="Pill Shape" className="pill-shape" />
-          <Image src={roundShape} alt="Round Shape" className="round-shape" />
+          <Image src={pillShape} alt="Pill Shape" className="pill-shape parallax" data-speed-x="6" data-speed-y="6" />
+          <Image src={roundShape} alt="Round Shape" className="round-shape parallax" data-speed-x="8" data-speed-y="8" />
         </div>
       </div>
     </>

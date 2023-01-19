@@ -146,6 +146,8 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .secondary-section.tab-wrapper{padding-top: 58px;}
 .chakra-button.password-iconbutton{background-color: transparent; border-radius: 50%; width: 30px; height: 30px; min-width: auto;}
 .chakra-button.password-iconbutton:hover, .chakra-button.password-iconbutton:focus{background-color: #172e78;}
+.chakra-card .chakra-table__container{max-width: calc(100vw - 64px);}
+.open-sidebar,.show-searchbar{overflow: hidden;}
 .radio-group{padding-bottom: 43px;}
 .check-group{padding-bottom: 39px;}
 .snackbar-group{padding-bottom: 52px;}
@@ -164,7 +166,7 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .header{display: flex;align-items: center;background-color: #0F1E4E; padding: 15px 26px 14px 0;position: fixed;top: 0;left: var(--sidebar-width);right: 0;z-index: 1;}
 .header .search-wrapper{position: relative; max-width: 304px; width: 100%; margin-left: 28px;}
 .header .search-wrapper .chakra-input{border-radius: 10px; border-color: transparent; padding: 8px 8px 8px 35px; height: 48px; color: #FFFFFF; background-color: transparent; background-image: url('./assets/images/search-ic.svg'); background-position: left 8px center; background-repeat: no-repeat; font-family: inherit; font-size: 18px; line-height: 24px;}
-.header .search-wrapper .chakra-input:focus{border-color: #59B997 !important;}
+.header .search-wrapper .chakra-input:focus{border-color: #A555FF !important;}
 .header .search-wrapper .chakra-input::placeholder{color: #FFFFFF;}
 .header .chakra-menu__menu-button{background-color: transparent; border: 1px solid transparent; border-radius: 8px; font-weight: 400; padding: 8px 8px 8px 10px;font-size: 18px; line-height: 24px;letter-spacing: 0px;}
 .header .chakra-menu__menu-button:active,
@@ -217,6 +219,7 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 /* Sidebar
 --------------------------------------------------------------------------------------------------------*/
 .sidebar{position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; background-color: #0F1E4E; width: var(--sidebar-width); flex-wrap: nowrap; overflow: auto; transition: all 0.3s; z-index: 1;}
+.sidebar ul{height: 100%;}
 .sidebar li .nav-link{display: flex;flex-direction: column; align-items: center; color: #FFFFFF; padding: 15px; position: relative;margin-bottom: 8px;}
 .sidebar li:last-child .nav-link{margin-bottom: 0;}
 .sidebar li .nav-link .img-wrapper{position: relative;}
@@ -238,7 +241,7 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 --------------------------------------------------------------------------------------------------------*/
 .main-content{ padding: 110px 37px 35px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
 
-.statistic-card{background-color: #0F1E4E;display: flex;align-items: center; justify-content: space-between;padding: 22px 30px 24px; border: 1px solid transparent; height: 100%;transition: all 300ms ease;position: relative;}
+.statistic-card{background-color: #0F1E4E;display: flex;align-items: center; justify-content: space-between;padding: 22px 30px 24px; border: 1px solid transparent; height: 100%;transition: all 300ms ease;position: relative;z-index: 0;}
 .statistic-card .data-difference{display: flex;align-items: center;padding-bottom: 3px;}
 .statistic-card .card-title{padding-bottom: 16px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 110px;}
 .statistic-card .card-number{padding-bottom: 21px;font-weight: 700;}
@@ -247,7 +250,7 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .sale-up .data-difference{color: #65FF87;}
 .sale-down .data-difference{color: #FF3535;}
 .revenue-card .data-chart{height: 290px;}
-.statistic-card::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: rgba(255,255,255, 0.08); transition: all 300ms ease; z-index: 0;}
+.statistic-card::after { content: ''; position: absolute; left: 50%; bottom: 0; top: 0; transform: translateX(-50%); height: 100%; width: 0; background-color: rgba(255,255,255, 0.05); transition: all 300ms ease; z-index: -1;}
 .statistic-card:hover::after,.statistic-card:focus::after{width: 100%;}
 
 .table-card .card-heading{padding-bottom: 8px;}
@@ -309,24 +312,25 @@ span.chakra-checkbox__control{transition: all 0.3s;}
 
 @media (max-width:767px) {
     h3.chakra-text{font-size: 26px; line-height: 30px;}
+    .header{padding: 10px 4px;left: 0;}
     h5.chakra-text{font-size: 20px; line-height: 24px;}
-    .header{padding: 10px 4px; z-index: 2;left: 0;}
     .logo{width: 32px;height: 32px;}
     .icon-btn.chakra-button{width: 40px;height: 40px;}
     .header .search-wrapper{position: fixed;left: 0;right: 0;top: -100px;background-color: #051444;max-width: none; transition: all 0.3s; padding: 16px; z-index: 1; margin-left: 0;}
     .header .search-wrapper .chakra-input{background-color: #0F1E4E;}
     .header .icon-btn{margin-right: 8px;}
     .show-searchbar .search-wrapper{top: 0;}
-    .sidebar{left: calc(-1 * var(--sidebar-width) - 100px); width: calc(var(--sidebar-width) + 100px); z-index: 4;}
+    .sidebar{left: calc(-1 * var(--sidebar-width) - 100px); width: calc(var(--sidebar-width) + 100px);}
+    .sidebar ul{padding-top: 8px;}
     .sidebar .login-logo{margin: 30px 20px;display: block;}
     .sidebar .login-logo >img{height: 32px;}
-    .sidebar li .nav-link{flex-direction: row; padding: 10px 20px;}
+    .sidebar li .nav-link{flex-direction: row; padding: 8px 16px;}
     .sidebar li .nav-link img{margin-bottom: 0;}
     .sidebar li .nav-link .img-wrapper{margin-right: 10px;width: auto;}
     .sidebar li .nav-link span{justify-content: flex-start;}
     .main-content{width: 100%; margin-left: 0;}
     .open-sidebar .sidebar{left: 0;}
-    .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible; z-index: 3;}
+    .open-sidebar .overlay, .show-searchbar .overlay{ opacity: 1; visibility: visible;}
     .statistic-card .card-title{padding-bottom: 8px;}
     .secondary-section, .secondary-section.four-col, .secondary-section.other-section, .secondary-section.tab-wrapper, .secondary-section.three-col{padding-top: 34px;}
     .snackbar-group{padding-bottom: 34px;}
