@@ -116,6 +116,8 @@ const theme = extendTheme({
             borderRadius: "0",
             boxShadow: "none !important",
             color: "#FFFFFF",
+            fontSize: "15px",
+            height: "43px",
             _focus: {
               borderColor: "#A555FF",
             },

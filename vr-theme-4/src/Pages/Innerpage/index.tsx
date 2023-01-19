@@ -84,7 +84,7 @@ const Innerpage = () => {
                 sm: "24px",
                 md: "32px",
                 lg: "44px",
-                xl: "53px",
+                xl: "50px",
               }}
             >
               <Input type="text" placeholder="Name" />
