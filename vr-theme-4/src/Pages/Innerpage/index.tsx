@@ -61,13 +61,29 @@ const Innerpage = () => {
             Users
           </Text>
           <Card className="revenue-card">
-            <Text as="h5" pt="1">
+            <Text as="h5" pt={{ lg: 1 }} pb={{ base: "10px", sm: "16px" }}>
               One Column
             </Text>
-            <FormControl>
+            <FormControl
+              pb={{
+                base: "16px",
+                sm: "24px",
+                md: "32px",
+                lg: "44px",
+                xl: "53px",
+              }}
+            >
               <Input type="text" placeholder="Name" />
             </FormControl>
-            <FormControl>
+            <FormControl
+              pb={{
+                base: "16px",
+                sm: "20px",
+                md: "32px",
+                lg: "44px",
+                xl: "20px",
+              }}
+            >
               <Select
                 placeholder="Country"
                 variant="flushed"
@@ -78,16 +94,23 @@ const Innerpage = () => {
                 <option value="option3">USA</option>
               </Select>
             </FormControl>
-            <Textarea variant="flushed" placeholder="Text area" rows={4} />
+            <Textarea variant="flushed" placeholder="Text area" rows={3} />
 
             {/* -------- Two column start ---------  */}
             <section className="secondary-section">
-              <Text as="h5">Two Column</Text>
+              <Text as="h5" pb={{ base: "10px", sm: "16px", md: "22px" }}>
+                Two Column
+              </Text>
               <Grid
                 templateColumns="repeat(6, 1fr)"
                 columnGap={{ base: "16px", md: "30px" }}
-                gridRowGap={{ base: "16px", md: "30px" }}
-                rowGap="10px"
+                gridRowGap={{
+                  base: "16px",
+                  sm: "24px",
+                  md: "30px",
+                  lg: "40px",
+                  xl: "52px",
+                }}
               >
                 <GridItem colSpan={{ base: 12, md: 3 }}>
                   <FormControl>
@@ -142,12 +165,14 @@ const Innerpage = () => {
             </section>
 
             {/* -------- Three column start ---------  */}
-            <section className="secondary-section">
-              <Text as="h5">Three Column</Text>
+            <section className="secondary-section three-col">
+              <Text as="h5" pb={{ base: "10px", sm: "16px", xl: "39px" }}>
+                Three Column
+              </Text>
               <Grid
                 templateColumns="repeat(12, 1fr)"
                 columnGap={{ base: "16px", md: "30px" }}
-                rowGap="10px"
+                rowGap={{ base: "16px", sm: "24px", md: "30px", lg: "0" }}
               >
                 <GridItem colSpan={{ base: 12, lg: 4, md: 6 }}>
                   <FormControl>
@@ -174,12 +199,14 @@ const Innerpage = () => {
             </section>
 
             {/* -------- Four column start ---------  */}
-            <section className="secondary-section">
-              <Text as="h5">Four Column</Text>
+            <section className="secondary-section four-col">
+              <Text as="h5" pb={{ base: "10px", sm: "18px" }}>
+                Four Column
+              </Text>
               <Grid
                 templateColumns="repeat(12, 1fr)"
                 columnGap={{ base: "16px", md: "30px" }}
-                rowGap="10px"
+                rowGap={{ base: "16px", sm: "24px", md: "30px", lg: "0" }}
               >
                 <GridItem colSpan={{ base: 12, lg: 3, md: 6 }}>
                   <FormControl>
@@ -222,9 +249,13 @@ const Innerpage = () => {
             </section>
 
             {/* -------- Other Design start ---------  */}
-            <section className="secondary-section">
-              <Text as="h5">Other Design elements</Text>
-              <Text as="h6">File Upload</Text>
+            <section className="secondary-section other-section">
+              <Text as="h5" pb={{ base: "16px", md: "22px", xl: "31px" }}>
+                Other Design elements
+              </Text>
+              <Text as="h6" pb="14px">
+                File Upload
+              </Text>
               <div className="file-upload-wrapper">
                 <div className="file-content">
                   <input
@@ -240,7 +271,9 @@ const Innerpage = () => {
               </div>
 
               {/* -------- Radio start ---------  */}
-              <Text as="h6">Radio Button</Text>
+              <Text as="h6" pb="14px">
+                Radio Button
+              </Text>
               <RadioGroup defaultValue="Option1" className="radio-group">
                 <HStack spacing="28px">
                   <Radio value="Option1">Option 1</Radio>
@@ -249,7 +282,9 @@ const Innerpage = () => {
               </RadioGroup>
 
               {/* -------- Checkbox start ---------  */}
-              <Text as="h6">Check Box</Text>
+              <Text as="h6" pb="14px">
+                Check Box
+              </Text>
               <div className="check-group">
                 <HStack spacing="28px">
                   <Checkbox defaultChecked>Option 1</Checkbox>
@@ -258,7 +293,11 @@ const Innerpage = () => {
               </div>
 
               {/* -------- Snackbar start ---------  */}
-              <SimpleGrid gap={"19px"} columns={1} className="snackbar-group">
+              <SimpleGrid
+                gap={{ base: "16px", md: "19px" }}
+                columns={1}
+                className="snackbar-group"
+              >
                 <Alert status="error" className="alert-error">
                   <Image src={alertErrorIcon} />
                   <AlertDescription>This is an error Message</AlertDescription>
@@ -284,8 +323,13 @@ const Innerpage = () => {
               </SimpleGrid>
 
               {/* -------- Button Group start ---------  */}
-              <Text as="h6">Call to Action</Text>
-              <HStack spacing="20px" className="btn-groups">
+              <Text as="h5" pb={{ base: "16px", md: "24px" }}>
+                Call to Action
+              </Text>
+              <HStack
+                spacing={{ base: "20px", md: "39px" }}
+                className="btn-groups"
+              >
                 <Button variant="primary" className="btn-primary">
                   Primary
                 </Button>
@@ -296,7 +340,9 @@ const Innerpage = () => {
 
               {/* -------- Tab start ---------  */}
               <div className="secondary-section tab-wrapper">
-                <Text as="h5">Tabs</Text>
+                <Text as="h5" pb={{ base: "16px", md: "24px" }}>
+                  Tabs
+                </Text>
                 <Tabs>
                   <TabList>
                     <Tab>Tab 1</Tab>
