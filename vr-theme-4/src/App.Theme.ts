@@ -74,6 +74,10 @@ const theme = extendTheme({
             height: "auto",
             padding: "11px 0",
             color: "#FFFFFF",
+            boxShadow: "none !important",
+            _placeholder: {
+              color: "#B2B2B2",
+            },
             _focus: {
               borderColor: "#A555FF",
             },
@@ -99,6 +103,7 @@ const theme = extendTheme({
           field: {
             borderColor: "#B2B2B2",
             borderRadius: "0",
+            boxShadow: "none !important",
             color: "#FFFFFF",
             _focus: {
               borderColor: "#A555FF",
@@ -112,7 +117,11 @@ const theme = extendTheme({
         flushed: {
           borderColor: "#B2B2B2",
           borderRadius: "0",
+          boxShadow: "none !important",
           color: "#FFFFFF",
+          _placeholder: {
+            color: "#B2B2B2",
+          },
           _focus: {
             borderColor: "#A555FF",
           },
@@ -314,6 +323,13 @@ const theme = extendTheme({
             lineHeight: "26px",
             color: "#CFD2DC",
             borderBottomWidth: "3px",
+            padding: "10px 20px",
+            "@media (max-width:767px)": {
+              fontSize: "16px",
+              lineHeight: "20px",
+              padding: "8px 16px",
+            },
+            "&:not(:first-of-type)": { marginLeft: "10px" },
             _selected: {
               color: "#A555FF",
             },
@@ -323,6 +339,9 @@ const theme = extendTheme({
             },
             _hover: {
               color: "#A555FF",
+            },
+            _active: {
+              backgroundColor: "transparent",
             },
           },
           tablist: {
