@@ -189,10 +189,10 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .shape-wrapper .round-shape{right: calc(50% + 229px); bottom: 160px;}
 .shape-wrapper .pill-shape{left: 95px; bottom: 397px;}
 .login-container{min-height: 100vh; position: relative; z-index: 1;}
-.login-wrapper-left{max-width: 420px; width: 100%; margin: 0 auto; padding-top: 98px; padding-bottom: 133px; padding: 98px 20px 133px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
+.login-wrapper-left{max-width: 460px; width: 100%; margin-left: 24%; padding: 98px 20px 133px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
 .login-wrapper-left .login-logo{display: inline-block; margin-bottom: 20px; align-self: start;}
 .login-wrapper-right{display: flex; height: 100%;}
-.login-wrapper-right img{margin: auto 0;}
+.login-wrapper-right img{margin: auto 0; margin-left: 7%;}
 .login-form-outer{position: relative;}
 .login-form-outer::after, .login-form-outer::before, .login-form::after, .login-form::before{content: ''; position: absolute;}
 .login-form-outer::after{ left: 0; top: -2px; right: 0; height: 2px; background:linear-gradient(90deg, rgba(226,57,241,1) 0%, rgba(34,150,203,1) 100%);}
@@ -207,7 +207,7 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .login-tab .chakra-tabs__tab[aria-selected=true], .login-tab .chakra-tabs__tab[data-selected]{ border-color: #fff; opacity: 1; background-color: transparent; color: #fff;}
 .login-tab .chakra-tabs__tab-panel{padding: 0;}
 .login-tab h4{padding-top: 50px; padding-bottom: 24px;}
-.login-form .username-field{margin-bottom: 33px;}
+.login-form .username-field{margin-bottom: 28px;}
 .login-form .password-field{margin-bottom: 50px;}
 .login-form .chakra-link:not(.chakra-button){color: #B2B2B2;}
 .login-form .primary-link{margin-top: 37px; display: inline-block;}
@@ -285,6 +285,8 @@ span.chakra-checkbox__control{transition: all 0.3s;}
 @media (max-width:1399px) {
     .statistic-card{padding: 20px;}
     .statistic-card .card-mockup{width: 80px;height: 80px;}
+    .login-wrapper-left{margin: 0 auto;}
+    .login-wrapper-right img{margin: auto;}
 }
 
 @media (max-width:1199px) {
