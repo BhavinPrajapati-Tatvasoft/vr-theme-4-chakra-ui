@@ -50,7 +50,6 @@ export const data = {
     {
       label: "Dataset 1",
       data: [8000,6000,11000,9000,7000,17000,13000,14000,20000,8000,12000],
-      // backgroundColor: "#2296CB",
       borderColor: '#E239F1',
     },
   ],

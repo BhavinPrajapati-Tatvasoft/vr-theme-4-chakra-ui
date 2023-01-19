@@ -51,8 +51,6 @@ const Login = () => {
       { opacity: 1, }
     );
     
-
-
     const parallaxContainer = document.getElementById('parallax-container');
     const parallaxItems = document.getElementsByClassName('parallax');
     const fixer = 0.0030;
@@ -61,13 +59,10 @@ const Login = () => {
       if (parallaxContainer) {
         const pageX = event.pageX - (parallaxContainer.getBoundingClientRect().width * 0.5);
         const pageY = event.pageY - (parallaxContainer.getBoundingClientRect().height * 0.5);
-
-
         for (let i = 0; i < parallaxItems.length; i++) {
           const item = parallaxItems[i];
           const speedX = parseInt(item.getAttribute("data-speed-x") as string);
           const speedY = parseInt(item.getAttribute("data-speed-y") as string);
-
           if (speedX && speedY) {
             TweenMax.set(item, {
               x: ((item as HTMLElement).offsetLeft + pageX * speedX) * fixer,

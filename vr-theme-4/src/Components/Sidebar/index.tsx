@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Hide, Image, List, ListItem, Show, Text } from "@chakra-ui/react";
+import { Hide, Image, List, ListItem, Text } from "@chakra-ui/react";
 import { Link, NavLink } from "react-router-dom";
 import {
   dashboardActiveIcon,
