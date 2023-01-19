@@ -74,8 +74,8 @@ const Dashboard: React.FC = () => {
             templateColumns="repeat(12, 1fr)"
             gap={{ base: "16px", lg: "20px", xl: "30px" }}
           >
+            {/* -------- statistic-card start ---------  */}
             <GridItem colSpan={{ base: 12, xl: 6 }}>
-              {/* -------- statistic-card start ---------  */}
               <Grid
                 templateColumns="repeat(12, 1fr)"
                 gap={{ base: "16px", lg: "20px", xl: "30px" }}
@@ -194,10 +194,11 @@ const Dashboard: React.FC = () => {
                   </a>
                 </GridItem>
               </Grid>
-              {/* -------- statistic-card end ---------  */}
             </GridItem>
+            {/* -------- statistic-card end ---------  */}
+
+            {/* -------- revenue-card start ---------  */}
             <GridItem colSpan={{ base: 12, xl: 6 }}>
-              {/* -------- revenue-card start ---------  */}
               <Card className="revenue-card">
                 <div className="card-heading">
                   <Text as="h6" className="card-title">
@@ -222,11 +223,11 @@ const Dashboard: React.FC = () => {
                   <RevenueReport />
                 </AspectRatio>
               </Card>
-              {/* -------- revenue-card end ---------  */}
             </GridItem>
+            {/* -------- revenue-card end ---------  */}
 
+            {/* -------- table-card start ---------  */}
             <GridItem colSpan={{ base: 12, xl: 9 }}>
-              {/* -------- table-card start ---------  */}
               <Card className="table-card">
                 <div className="card-heading">
                   <Text as="h6" className="card-title">
@@ -319,11 +320,11 @@ const Dashboard: React.FC = () => {
                   </Table>
                 </TableContainer>
               </Card>
-              {/* -------- table-card end ---------  */}
             </GridItem>
+            {/* -------- table-card end ---------  */}
 
+            {/* -------- campaign-card start ---------  */}
             <GridItem colSpan={{ base: 12, xl: 3 }}>
-              {/* -------- campaign-card start ---------  */}
               <Card className="campaign-card">
                 <div className="card-heading">
                   <Text as="h6" className="card-title">
@@ -385,8 +386,8 @@ const Dashboard: React.FC = () => {
                   <Text as="h6">Used Balance this Billing Cycle</Text>
                 </div>
               </Card>
-              {/* -------- campaign-card end ---------  */}
             </GridItem>
+            {/* -------- campaign-card end ---------  */}
           </Grid>
         </div>
         {/* Main content End */}

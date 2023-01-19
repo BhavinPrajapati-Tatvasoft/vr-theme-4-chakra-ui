@@ -240,8 +240,9 @@ div.chakra-form__error-message{color: #FF3535; font-size: 12px; line-height: 16p
 .main-content{ padding: 110px 37px 35px; transition: all 0.3s; width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
 
 .statistic-card{background-color: #0F1E4E;display: flex;align-items: center; justify-content: space-between;padding: 22px 30px 24px; border: 1px solid transparent; height: 100%;transition: all 300ms ease;position: relative;z-index: 0;}
+.statistic-card>div{max-width: calc(100% - 96px); width: 100%;}
 .statistic-card .data-difference{display: flex;align-items: center;padding-bottom: 3px;}
-.statistic-card .card-title{padding-bottom: 16px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 110px;}
+.statistic-card .card-title{padding-bottom: 16px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .statistic-card .card-number{padding-bottom: 21px;font-weight: 700;}
 .statistic-card .data-difference > img{display: block;margin-right: 5px;}
 .statistic-card .data-time-log{color: #CFD2DC;font-size: 12px;line-height: 16px;}
