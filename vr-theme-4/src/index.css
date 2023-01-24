@@ -288,6 +288,7 @@ span.chakra-checkbox__control{transition: all 0.3s;}
     .main-content{margin-left: calc(var(--sidebar-width) - 30px); width: calc(100% - (var(--sidebar-width) - 30px)); padding: 110px 30px 35px;}
     .header{left: calc(var(--sidebar-width) - 30px);;}
     .secondary-section, .secondary-section.four-col,.secondary-section.other-section, .secondary-section.tab-wrapper{padding-top: 50px;}
+    .login-wrapper-left{padding: 70px 20px;}
 }
 
 @media (max-width:991px) {

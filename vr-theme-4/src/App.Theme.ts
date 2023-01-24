@@ -71,6 +71,9 @@ const theme = extendTheme({
             borderColor: "#A555FF",
             color: "#A555FF",
           },
+          _active: {
+            bg: "transparent",
+          },
         },
       },
       defaultProps: {},

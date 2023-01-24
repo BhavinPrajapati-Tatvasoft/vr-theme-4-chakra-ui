@@ -50,26 +50,63 @@ const Login = () => {
       { opacity: 0 },
       { opacity: 1 }
     );
+    let shape = gsap.timeline();
+    shape.fromTo(
+      ".diamond-shape",
+      { y: "-1500px" },
+      { y: 0, stagger: 0.2, duration: 1 }
+    );
+    shape.fromTo(
+      ".pill-shape",
+      { x: "-300%", rotate: "-360deg" },
+      { x: 0, rotate: 0, stagger: 0.2, duration: 1 }
+    );
+    shape.fromTo(".round-shape", { scale: 0 }, { scale: 1, duration: 1 });
 
     const parallaxContainer = document.getElementById("parallax-container");
     const parallaxItems = document.getElementsByClassName("parallax");
-    const fixer = 0.003;
+    const parallaYItems = document.getElementsByClassName("parallay");
+    const parallaZItems = document.getElementsByClassName("parallaz");
+    const fixerX = 0.003;
+    const fixerY = 0.007;
+    const fixerZ = 0.01;
 
-    document.addEventListener("mousemove", function (event) {
+    document.addEventListener("mouseover", function (event) {
       if (parallaxContainer) {
         const pageX =
           event.pageX - parallaxContainer.getBoundingClientRect().width * 0.5;
         const pageY =
           event.pageY - parallaxContainer.getBoundingClientRect().height * 0.5;
-
         for (let i = 0; i < parallaxItems.length; i++) {
           const item = parallaxItems[i];
           const speedX = parseInt(item.getAttribute("data-speed-x") as string);
           const speedY = parseInt(item.getAttribute("data-speed-y") as string);
           if (speedX && speedY) {
             TweenMax.set(item, {
-              x: ((item as HTMLElement).offsetLeft + pageX * speedX) * fixer,
-              y: ((item as HTMLElement).offsetTop + pageY * speedY) * fixer,
+              x: ((item as HTMLElement).offsetLeft + pageX * speedX) * fixerX,
+              y: ((item as HTMLElement).offsetTop + pageY * speedY) * fixerX,
+            });
+          }
+        }
+        for (let i = 0; i < parallaYItems.length; i++) {
+          const item = parallaYItems[i];
+          const speedX = parseInt(item.getAttribute("data-speed-x") as string);
+          const speedY = parseInt(item.getAttribute("data-speed-y") as string);
+          if (speedX && speedY) {
+            TweenMax.set(item, {
+              x: ((item as HTMLElement).offsetLeft + pageX * speedX) * fixerY,
+              y: ((item as HTMLElement).offsetTop + pageY * speedY) * fixerY,
+            });
+          }
+        }
+        for (let i = 0; i < parallaZItems.length; i++) {
+          const item = parallaZItems[i];
+          const speedX = parseInt(item.getAttribute("data-speed-x") as string);
+          const speedY = parseInt(item.getAttribute("data-speed-y") as string);
+          if (speedX && speedY) {
+            TweenMax.set(item, {
+              x: ((item as HTMLElement).offsetLeft + pageX * speedX) * fixerZ,
+              y: ((item as HTMLElement).offsetTop + pageY * speedY) * fixerZ,
             });
           }
         }
@@ -197,24 +234,24 @@ const Login = () => {
           <div className="pink shape"></div>
           <Image
             src={diamondShape}
-            alt="Diamon Shape"
+            alt="Diamond Shape"
             className="diamond-shape parallax"
-            data-speed-x="10"
-            data-speed-y="10"
+            data-speed-x="26"
+            data-speed-y="26"
           />
           <Image
             src={pillShape}
             alt="Pill Shape"
-            className="pill-shape parallax"
+            className="pill-shape parallay"
             data-speed-x="6"
             data-speed-y="6"
           />
           <Image
             src={roundShape}
             alt="Round Shape"
-            className="round-shape parallax"
-            data-speed-x="8"
-            data-speed-y="8"
+            className="round-shape parallaz"
+            data-speed-x="18"
+            data-speed-y="18"
           />
         </div>
       </div>
